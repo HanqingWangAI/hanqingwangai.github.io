@@ -61,18 +61,24 @@ header-img: assets/img/hero.jpg
             {% endif %}
     
         </aside>
-    <p><font color="red">News!</font> One paper is accepted by NeurIPS 2022.</p>
-    <p><font color="red">News!</font> One paper is accepted by CVPR 2022.</p>
-    <p><font color="red">News!</font> One paper is accepted by CVPR 2021.</p>
-    <p><font color="red">News!</font> One paper is accepted by SIGGRAPH Asia 2020.</p>
-    <p><font color="red">News!</font> One paper is accepted by ECCV 2020.</p>
-    <p><font color="red">News!</font> One paper accepted by AAAI 2019 <b>(Oral)</b>.</p>
+    <h2>Recent News</h2><br>
+    <p>One paper has been accepted at CVPR 2023.</p>
+    <p>One paper has been accepted by IJCV.</p>
+    <p>One paper has been accepted at NeurIPS 2022 <b><font color="red">(Spotlight)</font></b>.</p>
+    <p>One paper has been accepted at CVPR 2022.</p>
+    <p>One paper has been accepted at CVPR 2021.</p>
+    <p>One paper has been accepted at SIGGRAPH Asia 2020.</p>
+    <p>One paper has been accepted at ECCV 2020.</p>
+    <p>One paper has been accepted at AAAI 2019 <b><font color="red">(Oral)</font></b>.</p>
     <br><br>
     <h2>About Me</h2><br>
     <div class="article-list">
     <div class="post-cover">
-    <p>Hi, I am Hanqing Wang - a third-year Ph.D. student of <em>Media Computing and Intelligent Systems Lab, Beijing Institute of Technology - Beijing</em>. I am advised by Prof. <a href="http://iitlab.bit.edu.cn/mcislab/~liangwei/">Wei Liang</a>. I also collaborate with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai(Craig) Yu</a> - director of <em>Design Computing and Extended Reality Group, George Mason University - Virginia.</em> I did my internship at <em>Microsoft Research Asia, VC Group</em> from Mar. 2017 to Nov. 2017, mentored by researcher <a href="http://jlyang.org/">Jiaolong Yang</a>. I was a research intern at <em>Inception Institute of Artificial Intelligence</em> (IIAI) from Jul. 2019 to Apr. 2020, advised by Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>, the lead scientist of the lab. I am a visiting student at ETH Zürich, CVL, supervised by Prof. <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>.</p>
-    <p>My research interests are Computer Vision/Graphics and Machine Learning.</p>
+    <p>Hi, I am Hanqing Wang - a fifth-year Ph.D. candidate in the <em>Media Computing and Intelligent Systems Laboratory at Beijing Institute of Technology</em>, Beijing. I am supervised by Prof. <a href="https://liangwei-bit.github.io/web/">Wei Liang</a>. In the past, I had the opportunity to collaborate with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai(Craig) Yu</a>, Director of the <em>Design Computing and Extended Reality Group</em> at George Mason University, Virginia.</p>
+    
+    <p>From March to November 2017, I interned at <em>Microsoft Research Asia</em> in the VC Group, under the mentorship of researcher <a href="http://jlyang.org/">Jiaolong Yang</a>. Subsequently, I was a research intern at the <em>Inception Institute of Artificial Intelligence (IIAI)</em> between July 2019 and April 2020, advised by Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>, the laboratory's lead scientist. Currently, I am a visiting student at <em>ETH Zürich</em> in the Computer Vision Lab, supervised by <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>.
+    </p>
+    <p>My research interests are primarily in the areas of Embodied AI and Vision+X.</p>
     <p><br><a href="mailto:hanqingwang@bit.edu.cn">[Email]</a><a href="/assets/resume.pdf">[CV]</a></p>
     </div>
     <br>
@@ -93,14 +99,15 @@ header-img: assets/img/hero.jpg
                     {% if post.thumbnail %}
                     <section class="post-thumbnail">
                         <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"></a> -->
-                        <img src="{{ post.thumbnail }}" href="{{ post.url | prepend: site.baseurl }}" alt="">
+                        <!-- <img src="{{ post.thumbnail }}" href="{{ post.url | prepend: site.baseurl }}" alt=""> -->
+                        <img src="{{ post.thumbnail }}"  alt="">
                     </section>
                     {% endif %}
                     <section class="post-preview">
                         <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"></a> -->
-                        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">
+                        <!-- <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"> -->
                         <h2 class="post-title">{{ post.title }}</h2>
-                        </a>
+                        <!-- </a> -->
                         {% if post.authors %}
                         <p class="post-authors">{{ post.authors }}</p>
                         {% endif %}

@@ -1,6 +1,36 @@
 [
   
     {
+      "title"    : "Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering",
+      "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
+      "url"      : "/2023/03/17/cqa.html"
+    } ,
+  
+    {
+      "title"    : "Active Perception for Visual-Language Navigation&lt;br&gt;&lt;br&gt;",
+      "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
+      "url"      : "/2023/01/17/ap.html"
+    } ,
+  
+    {
+      "title"    : "Towards Versatile Embodied Navigation&lt;br&gt;&lt;br&gt;",
+      "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
+      "url"      : "/2022/09/17/mtn.html"
+    } ,
+  
+    {
+      "title"    : "Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation",
+      "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
+      "url"      : "/2022/05/17/ccc.html"
+    } ,
+  
+    {
+      "title"    : "Structured Scene Memory for Vision-Language Navigation",
+      "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
+      "url"      : "/2021/05/17/ssm.html"
+    } ,
+  
+    {
       "title"    : "Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning",
       "tags"     : "Scene&nbspArrangement Reinforcement&nbspLearning MCTS",
       "url"      : "/2020/07/30/mover.html"

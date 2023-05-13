@@ -20,6 +20,19 @@
     <link rel="stylesheet" href="/assets/css/share.min.css">
     <link rel="stylesheet" href="/assets/css/app.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        .countmap {
+          width: 400px;
+          /* height: 200px; */
+          border: 1px solid black;
+          /* resize: both; */
+          overflow: auto;
+        }
+        .centeredbox{
+          display: flex;
+          justify-content: center;
+        }
+      </style>
 </head>
 
 <body>
@@ -127,6 +140,12 @@
                 <div class="search_result"></div>
             </div>
             
+            <br>
+            <div class="centeredbox">
+                <div class="countmap">
+                <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=n9KSOj4fZGAp-1Y3aBz7AUdF_DOVo294dsKsy0ip2QE&cl=ffffff&w=a"></script>
+                </div>
+            </div>
     
         </aside>
     <h2>Recent News</h2><br>
@@ -524,9 +543,10 @@
         
 
     </div>
-
     
 
+    
+    
 </main>
 
 <footer class="g-footer">
@@ -540,6 +560,7 @@
   </section>
   <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>
 </footer>
+
 
 
     </div>

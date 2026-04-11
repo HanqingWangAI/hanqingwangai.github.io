@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'Hanqing''s blog'
-description: 'A walker on the way'
-keyword: 'Computer Vision, Computer Graphics, Artificial Intelligence'
+title: 'Hanqing Wang'
+description: 'Researcher at Shanghai AI Laboratory. Research in robot learning and embodied AI.'
+keyword: 'Robot Learning, Embodied AI, Computer Vision, Computer Graphics, Artificial Intelligence'
 url: '' # your host
 
 # if you don't need baseurl, you should leave this value blank.
@@ -21,7 +21,7 @@ footer:
 # Author 配置博主信息
 author: 'Hanqing Wang'
 nickname: 'HQ'
-bio: 'Life is fantastic'
+bio: 'Researcher in Robot Learning & Embodied AI'
 avatar: '/assets/img/profile.png'
 
 # Search
@@ -63,7 +63,7 @@ recommend-condition-size: 12 # a tag will be recommended if the size of it is mo
 # Build settings
 paginate: 6
 paginate_path: 'page:num'
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md','sample_posts','things_to_do.md','_posts/2019-05-24-vae.md']
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md','sample_posts','things_to_do.md','_posts/2019-05-24-vae.md', '.DS_Store']
 
 # Markdown
 markdown: kramdown

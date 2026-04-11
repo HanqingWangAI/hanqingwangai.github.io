@@ -1,6 +1,90 @@
 [
   
     {
+      "title"    : "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
+      "tags"     : "Simulation Embodied&nbspAI",
+      "url"      : "/2026/02/08/sim1.html"
+    } ,
+  
+    {
+      "title"    : "Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment",
+      "tags"     : "Simulation Reinforcement&nbspLearning Robotics",
+      "url"      : "/2026/01/28/tac2real.html"
+    } ,
+  
+    {
+      "title"    : "InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation",
+      "tags"     : "Vision-Language-Action Robotics Manipulation",
+      "url"      : "/2026/01/04/internvla-a1.html"
+    } ,
+  
+    {
+      "title"    : "VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs",
+      "tags"     : "Vision-Language&nbspNavigation Embodied&nbspAI",
+      "url"      : "/2025/12/28/vl-ln-bench.html"
+    } ,
+  
+    {
+      "title"    : "Language-to-Space Programming for Training-Free 3D Visual Grounding",
+      "tags"     : "3D&nbspVisual&nbspGrounding LLM",
+      "url"      : "/2025/11/01/l2s.html"
+    } ,
+  
+    {
+      "title"    : "InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy",
+      "tags"     : "Vision-Language-Action Generalist&nbspPolicy Robotics",
+      "url"      : "/2025/10/17/internvla-m1.html"
+    } ,
+  
+    {
+      "title"    : "Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities",
+      "tags"     : "Vision-Language&nbspNavigation Embodied&nbspAI",
+      "url"      : "/2025/10/01/embodied-gap.html"
+    } ,
+  
+    {
+      "title"    : "InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts",
+      "tags"     : "3D&nbspScene Simulation Dataset",
+      "url"      : "/2025/09/12/internscenes.html"
+    } ,
+  
+    {
+      "title"    : "StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling",
+      "tags"     : "Vision-Language&nbspNavigation Embodied&nbspAI",
+      "url"      : "/2025/07/07/streamvln.html"
+    } ,
+  
+    {
+      "title"    : "GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation",
+      "tags"     : "Simulation Manipulation LLM",
+      "url"      : "/2025/06/01/genmanip.html"
+    } ,
+  
+    {
+      "title"    : "Mastering Scene Rearrangement with Expert-Assisted Curriculum Learning and Adaptive Trade-Off Tree-Search",
+      "tags"     : "Scene&nbspRearrangement Reinforcement&nbspLearning",
+      "url"      : "/2024/10/01/scene-rearrangement.html"
+    } ,
+  
+    {
+      "title"    : "GRUtopia: Dream General Robots in a City at Scale",
+      "tags"     : "Simulation Embodied&nbspAI",
+      "url"      : "/2024/07/15/grutopia.html"
+    } ,
+  
+    {
+      "title"    : "ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments",
+      "tags"     : "Vision-Language&nbspNavigation Embodied&nbspAI",
+      "url"      : "/2024/05/01/etpnav.html"
+    } ,
+  
+    {
+      "title"    : "DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation",
+      "tags"     : "Vision-Language&nbspNavigation Embodied&nbspAI",
+      "url"      : "/2023/10/01/dreamwalker.html"
+    } ,
+  
+    {
       "title"    : "Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering",
       "tags"     : "Embodied&nbspVision Computer&nbspVision Vision-Language&nbspNavigation",
       "url"      : "/2023/03/17/cqa.html"

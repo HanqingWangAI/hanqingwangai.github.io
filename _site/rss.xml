@@ -1,225 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hanqing's blog</title>
-    <description>A walker on the way</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 13 May 2023 20:02:37 +0200</pubDate>
-    <lastBuildDate>Sat, 13 May 2023 20:02:37 +0200</lastBuildDate>
-    <generator>Jekyll v4.3.1</generator>
+    <title>Hanqing Wang</title>
+    <description>Researcher at Shanghai AI Laboratory. Research in robot learning and embodied AI.</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 11 Apr 2026 20:06:48 +0800</pubDate>
+    <lastBuildDate>Sat, 11 Apr 2026 20:06:48 +0800</lastBuildDate>
+    <generator>Jekyll v4.4.1</generator>
     
       <item>
-        <title>Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering</title>
+        <title>SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds</title>
         <description>
 </description>
-        <pubDate>Fri, 17 Mar 2023 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2023/03/17/cqa.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/03/17/cqa.html</guid>
+        <pubDate>Sun, 08 Feb 2026 00:00:00 +0800</pubDate>
+        <link>/2026/02/08/sim1.html</link>
+        <guid isPermaLink="true">/2026/02/08/sim1.html</guid>
         
-        <category>Embodied&amp;nbspVision</category>
+        <category>Simulation</category>
         
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Vision-Language&amp;nbspNavigation</category>
+        <category>Embodied&amp;nbspAI</category>
         
         
       </item>
     
       <item>
-        <title>Active Perception for Visual-Language Navigation&lt;br&gt;&lt;br&gt;</title>
+        <title>Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment</title>
         <description>
 </description>
-        <pubDate>Tue, 17 Jan 2023 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2023/01/17/ap.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2023/01/17/ap.html</guid>
+        <pubDate>Wed, 28 Jan 2026 00:00:00 +0800</pubDate>
+        <link>/2026/01/28/tac2real.html</link>
+        <guid isPermaLink="true">/2026/01/28/tac2real.html</guid>
         
-        <category>Embodied&amp;nbspVision</category>
-        
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Vision-Language&amp;nbspNavigation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Towards Versatile Embodied Navigation&lt;br&gt;&lt;br&gt;</title>
-        <description>
-</description>
-        <pubDate>Sat, 17 Sep 2022 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2022/09/17/mtn.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/09/17/mtn.html</guid>
-        
-        <category>Embodied&amp;nbspVision</category>
-        
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Vision-Language&amp;nbspNavigation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation</title>
-        <description>
-</description>
-        <pubDate>Tue, 17 May 2022 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2022/05/17/ccc.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2022/05/17/ccc.html</guid>
-        
-        <category>Embodied&amp;nbspVision</category>
-        
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Vision-Language&amp;nbspNavigation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Structured Scene Memory for Vision-Language Navigation</title>
-        <description>
-</description>
-        <pubDate>Mon, 17 May 2021 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2021/05/17/ssm.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2021/05/17/ssm.html</guid>
-        
-        <category>Embodied&amp;nbspVision</category>
-        
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Vision-Language&amp;nbspNavigation</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning</title>
-        <description>
-</description>
-        <pubDate>Thu, 30 Jul 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/07/30/mover.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/30/mover.html</guid>
-        
-        <category>Scene&amp;nbspArrangement</category>
+        <category>Simulation</category>
         
         <category>Reinforcement&amp;nbspLearning</category>
         
-        <category>MCTS</category>
+        <category>Robotics</category>
         
         
       </item>
     
       <item>
-        <title>Active Visual Information Gathering for Vision-Language Navigation</title>
+        <title>InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation</title>
         <description>
 </description>
-        <pubDate>Sat, 04 Jul 2020 00:00:00 +0200</pubDate>
-        <link>http://localhost:4000/2020/07/04/active.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2020/07/04/active.html</guid>
+        <pubDate>Sun, 04 Jan 2026 00:00:00 +0800</pubDate>
+        <link>/2026/01/04/internvla-a1.html</link>
+        <guid isPermaLink="true">/2026/01/04/internvla-a1.html</guid>
         
-        <category>Embodied&amp;nbspVision</category>
+        <category>Vision-Language-Action</category>
         
-        <category>Computer&amp;nbspVision</category>
+        <category>Robotics</category>
+        
+        <category>Manipulation</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs</title>
+        <description>
+</description>
+        <pubDate>Sun, 28 Dec 2025 00:00:00 +0800</pubDate>
+        <link>/2025/12/28/vl-ln-bench.html</link>
+        <guid isPermaLink="true">/2025/12/28/vl-ln-bench.html</guid>
         
         <category>Vision-Language&amp;nbspNavigation</category>
         
-        
-      </item>
-    
-      <item>
-        <title>Deep Single-View 3D Object Reconstruction with Visual Hull Embedding</title>
-        <description>&lt;!-- 
-&gt; Transform your plain text into static websites and blogs.
-
-### Welcome
-
-This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.
-
-### So what is Jekyll, exactly?Permalink
-
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like [Markdown](https://daringfireball.net/projects/markdown/)) and our [Liquid](https://github.com/Shopify/liquid/wiki) renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
-
-### Helpful HintsPermalink
-
-Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.
-
-### Video Test
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt; --&gt;
-</description>
-        <pubDate>Thu, 14 Feb 2019 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2019/02/14/3d-recon.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2019/02/14/3d-recon.html</guid>
-        
-        <category>3D&amp;nbspReconstruction</category>
-        
-        <category>Computer&amp;nbspVision</category>
-        
-        <category>Deep&amp;nbspLearning</category>
+        <category>Embodied&amp;nbspAI</category>
         
         
       </item>
     
       <item>
-        <title>Transferring Objects: Joint Inference of Container and Human Pose</title>
-        <description>&lt;!-- 
-&gt; Transform your plain text into static websites and blogs.
-
-### Welcome
-
-This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.
-
-### So what is Jekyll, exactly?Permalink
-
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like [Markdown](https://daringfireball.net/projects/markdown/)) and our [Liquid](https://github.com/Shopify/liquid/wiki) renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
-
-### Helpful HintsPermalink
-
-Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.
-
-### Video Test
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt; --&gt;
+        <title>Language-to-Space Programming for Training-Free 3D Visual Grounding</title>
+        <description>
 </description>
-        <pubDate>Tue, 14 Mar 2017 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2017/03/14/transfer.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/03/14/transfer.html</guid>
+        <pubDate>Sat, 01 Nov 2025 00:00:00 +0800</pubDate>
+        <link>/2025/11/01/l2s.html</link>
+        <guid isPermaLink="true">/2025/11/01/l2s.html</guid>
         
-        <category>Functionality</category>
+        <category>3D&amp;nbspVisual&amp;nbspGrounding</category>
+        
+        <category>LLM</category>
         
         
       </item>
     
       <item>
-        <title>Joint Labelling and Segmentation for 3D Scanned Human Body</title>
-        <description>&lt;!-- 
-&gt; Transform your plain text into static websites and blogs.
-
-### Welcome
-
-This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.
-
-### So what is Jekyll, exactly?Permalink
-
-Jekyll is a simple, blog-aware, static site generator. It takes a template directory containing raw text files in various formats, runs it through a converter (like [Markdown](https://daringfireball.net/projects/markdown/)) and our [Liquid](https://github.com/Shopify/liquid/wiki) renderer, and spits out a complete, ready-to-publish static website suitable for serving with your favorite web server. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your project’s page, blog, or website from GitHub’s servers for free.
-
-### Helpful HintsPermalink
-
-Throughout this guide there are a number of small-but-handy pieces of information that can make using Jekyll easier, more interesting, and less hazardous. Here’s what to look out for.
-
-### Video Test
-
-&lt;iframe type=&quot;text/html&quot; width=&quot;100%&quot; height=&quot;385&quot; src=&quot;http://www.youtube.com/embed/gfmjMWjn-Xg&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt; --&gt;
+        <title>InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</title>
+        <description>
 </description>
-        <pubDate>Mon, 14 Mar 2016 00:00:00 +0100</pubDate>
-        <link>http://localhost:4000/2016/03/14/labelling.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/03/14/labelling.html</guid>
+        <pubDate>Fri, 17 Oct 2025 00:00:00 +0800</pubDate>
+        <link>/2025/10/17/internvla-m1.html</link>
+        <guid isPermaLink="true">/2025/10/17/internvla-m1.html</guid>
         
-        <category>Semantic&amp;nbspSegmentation</category>
+        <category>Vision-Language-Action</category>
         
-        <category>Graph&amp;nbspCut</category>
+        <category>Generalist&amp;nbspPolicy</category>
+        
+        <category>Robotics</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities</title>
+        <description>
+</description>
+        <pubDate>Wed, 01 Oct 2025 00:00:00 +0800</pubDate>
+        <link>/2025/10/01/embodied-gap.html</link>
+        <guid isPermaLink="true">/2025/10/01/embodied-gap.html</guid>
+        
+        <category>Vision-Language&amp;nbspNavigation</category>
+        
+        <category>Embodied&amp;nbspAI</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts</title>
+        <description>
+</description>
+        <pubDate>Fri, 12 Sep 2025 00:00:00 +0800</pubDate>
+        <link>/2025/09/12/internscenes.html</link>
+        <guid isPermaLink="true">/2025/09/12/internscenes.html</guid>
+        
+        <category>3D&amp;nbspScene</category>
+        
+        <category>Simulation</category>
+        
+        <category>Dataset</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling</title>
+        <description>
+</description>
+        <pubDate>Mon, 07 Jul 2025 00:00:00 +0800</pubDate>
+        <link>/2025/07/07/streamvln.html</link>
+        <guid isPermaLink="true">/2025/07/07/streamvln.html</guid>
+        
+        <category>Vision-Language&amp;nbspNavigation</category>
+        
+        <category>Embodied&amp;nbspAI</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation</title>
+        <description>
+</description>
+        <pubDate>Sun, 01 Jun 2025 00:00:00 +0800</pubDate>
+        <link>/2025/06/01/genmanip.html</link>
+        <guid isPermaLink="true">/2025/06/01/genmanip.html</guid>
+        
+        <category>Simulation</category>
+        
+        <category>Manipulation</category>
+        
+        <category>LLM</category>
         
         
       </item>

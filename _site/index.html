@@ -1,571 +1,975 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanqing's blog</title>
-    <meta name="author"  content="Hanqing Wang">
-    <meta name="description" content="A walker on the way">
-    <meta name="keywords"  content="Computer Vision, Computer Graphics, Artificial Intelligence">
+    <title>Hanqing Wang</title>
+    <meta name="author" content="Hanqing Wang">
+    <meta name="description" content="Research Scientist at Shanghai AI Laboratory">
+    <meta name="keywords" content="Robot Learning, Embodied AI, Computer Vision, Computer Graphics, Artificial Intelligence">
     <!-- Open Graph -->
-    <meta property="og:title" content="Hanqing's blog">
+    <meta property="og:title" content="Hanqing Wang">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://localhost:4000/">
-    <meta property="og:description" content="A walker on the way">
-    <meta property="og:site_name" content="Hanqing's blog">
-    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_271755_rdxzzo2kqwk.css">
-    <link rel="stylesheet" href="/assets/css/github-markdown.css">
-    <link rel="stylesheet" href="/assets/css/prism.css">
-    <link rel="stylesheet" href="/assets/css/share.min.css">
-    <link rel="stylesheet" href="/assets/css/app.min.css">
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-        .countmap {
-          width: 400px;
-          /* height: 200px; */
-          border: 1px solid black;
-          /* resize: both; */
-          overflow: auto;
-        }
-        .centeredbox{
-          display: flex;
-          justify-content: center;
-        }
-      </style>
+    <meta property="og:url" content="/">
+    <meta property="og:description" content="Research Scientist at Shanghai AI Laboratory">
+    <meta property="og:site_name" content="Hanqing Wang">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel="icon" href="/favicon.ico">
 </head>
-
 <body>
-    <!--[if lt IE 10]>
-<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
-<![endif]-->
-    <input id="nm-switch" type="hidden" value="false">
-    <div class="visible">
-      <header class="g-header">
-    <div class="g-logo">
-      <a href="/"></a>
-    </div>
-    <i id="menu-toggle" class="iconfont icon-menu"></i>
-    <nav class="g-nav">
-        <ul>
-            
-            <li><a href="/">home</a></li>
-            
-            <li><a href="/">blogs</a></li>
-            
-            <li><a href="/tags.html">tags</a></li>
-            
-        </ul>
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo"><span>HW</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="toggle-icon">&#9790;</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
-</header>
 
+    <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Hanqing <span class="gradient-text">Wang</span></h1>
+      <p class="hero-title">Research Scientist &middot; Shanghai AI Laboratory</p>
+      <p class="hero-desc">
+        I lead the Digital Modeling and Simulation Platform Team at the Embodied AI Center. My research focuses on <strong>embodied navigation</strong>, <strong>generalist robot policies</strong>, and <strong>large-scale simulation</strong> for embodied AI.
+      </p>
+      <div class="hero-links">
+        <a href="mailto:hanqingwang.c@gmail.com" class="hero-btn primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
+        </a>
+        <a href="/assets/resume.pdf" class="hero-btn secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          CV
+        </a>
+        <a href="https://github.com/hanqingwangai" class="hero-btn secondary" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://scholar.google.com/citations?user=eNaVn_UAAAAJ&hl=en" class="hero-btn secondary" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          Scholar
+        </a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="/assets/img/profile.png" alt="Hanqing Wang">
+    </div>
+  </div>
+</section>
 
-<div
-    class="g-banner home-banner banner-theme-default"
-    data-theme="default"
-    style="background: url(assets/img/hero.jpg) no-repeat center center; background-size: cover;"
->
-    <h2>Welcome</h2>
-    <p>I am Hanqing Wang.</p>
+<!-- About Section -->
+<section class="section reveal" id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-subtitle">Background & Research</p>
+  <div style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.9; max-width: 900px;">
+    <p>
+      I am a Research Scientist at the <strong>Shanghai Artificial Intelligence Laboratory</strong>, where I lead the <em>Digital Modeling and Simulation Platform Team</em> at the Embodied AI Center. My research spans embodied navigation and perception, generalist robot policies, and large-scale simulators and benchmarks for embodied AI.    </p>
+    <p style="margin-top: 1rem;">
+      I received my Ph.D. in Computer Science from the <em>Media Computing and Intelligent Systems Laboratory</em> at the Beijing Institute of Technology in 2024, advised by Prof. <a href="https://liangwei-bit.github.io/web/">Wei Liang</a>. During my Ph.D., I was a visiting student at <strong>ETH Zürich</strong>'s Computer Vision Lab (2021–2023), supervised by Prof. <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>. I also collaborated with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai (Craig) Yu</a> at George Mason University and held research internships at <strong>Microsoft Research Asia</strong> (with <a href="http://jlyang.org/">Jiaolong Yang</a>) and the Inception Institute of Artificial Intelligence (with Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>).
+    </p>
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="section reveal" id="news">
+  <h2 class="section-title">News</h2>
+  <p class="section-subtitle">Latest updates</p>
+  <ul class="news-list">
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      Co-organizing the <a href="https://internrobotics.shlab.org.cn/workshop/2025/">IROS 2025 Workshop on Multimodal Robot Learning in Physical Worlds</a> and the <a href="https://internrobotics.shlab.org.cn/challenge/2025/">Challenge on Multimodal Robot Learning</a>.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2025</span>
+      Papers accepted at <strong>ICCV 2025</strong>, <strong>EMNLP 2025</strong>, and <strong>CVPR 2025</strong>.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2024.07</span>
+      Released <a href="https://github.com/InternRobotics/InternUtopia" class="news-highlight">GRUtopia</a> (a.k.a. 桃源, later renamed <strong>InternUtopia</strong>) — a large-scale simulation platform for general-purpose embodied AI research.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2024.06</span>
+      Received my Ph.D. and was named <strong>Beijing Outstanding Doctoral Graduate</strong> (Top 5%) with an Outstanding Doctoral Dissertation award from BIT.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2024</span>
+      Paper on <strong>ETPNav</strong> accepted by <strong>IEEE T-PAMI</strong>; one paper accepted at <strong>IROS 2024</strong>.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2023</span>
+      Papers accepted at <strong>ICCV 2023</strong>, <strong>CVPR 2023</strong>, and <strong>IJCV</strong>.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2022</span>
+      One paper accepted at <strong>NeurIPS 2022</strong> <span class="news-badge">Spotlight</span> and one at <strong>CVPR 2022</strong>.
+    </li>
+    <li class="news-item">
+      <span class="news-date">2021</span>
+      One paper accepted at <strong>CVPR 2021</strong>.
+    </li>
+  </ul>
+</section>
+
+<!-- Publications Section -->
+<section class="section reveal" id="publications">
+  <h2 class="section-title">Publications</h2>
+  <p class="section-subtitle">Selected research papers</p>
+  <div class="pub-grid">
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds</h3>
+          
+          <p class="pub-authors">Yunsong Zhou, Hangxu Liu, Xuekun Jiang, Xing Shen, Yuanzhen Zhou, Hui Wang, Baole Fang, Yang Tian, Mulin Yu, Qiaojun Yu, Li Ma, Hengjie Li, <strong>Hanqing Wang</strong>, Jia Zeng, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2026</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2604.08544" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment</h3>
+          
+          <p class="pub-authors">Ningyu Yan, Shuai Wang, Xing Shen, Hui Wang, <strong>Hanqing Wang</strong>†, Yang Xiang, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2026</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2603.28475" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation</h3>
+          
+          <p class="pub-authors">Junhao Cai, Zetao Cai, Jiafei Cao, Yilun Chen, <strong>Hanqing Wang</strong>, et al.</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2026</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2601.02456" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs</h3>
+          
+          <p class="pub-authors">Wensi Huang, Shaohao Zhu, Meng Wei, Jinming Xu, Xihui Liu, <strong>Hanqing Wang</strong>†, Tai Wang, Feng Zhao, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2512.22342" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Language-to-Space Programming for Training-Free 3D Visual Grounding</h3>
+          
+          <p class="pub-authors">Boyu Mi, <strong>Hanqing Wang</strong>†, Tai Wang, Yilun Chen, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</h3>
+          
+          <p class="pub-authors">Xinyi Chen, Yilun Chen, Yanwei Fu, Ning Gao, <strong>Hanqing Wang</strong>, et al.</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2510.13778" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities</h3>
+          
+          <p class="pub-authors">Liuyi Wang, Xinyuan Xia, Hui Zhao, <strong>Hanqing Wang</strong>†, Tai Wang, Yilun Chen, Chengju Liu, Qijun Chen, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">International Conference on Computer Vision (ICCV), 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts</h3>
+          
+          <p class="pub-authors">Weipeng Zhong, Peizhou Cao, Yichen Jin, Li Luo, Wenzhe Cai, Jingli Lin, <strong>Hanqing Wang</strong>, Zhaoyang Lyu, Tai Wang, Bo Dai, Xudong Xu, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2509.10813" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling</h3>
+          
+          <p class="pub-authors">Meng Wei, Chenyang Wan, Xiqian Yu, Tai Wang, Yuqiang Yang, Xiaohan Mao, Chenming Zhu, Wenzhe Cai, <strong>Hanqing Wang</strong>, Yilun Chen, Xihui Liu, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2507.05240" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation</h3>
+          
+          <p class="pub-authors">Ning Gao, Yilun Chen, Shuai Yang, Xinyi Chen, Yang Tian, Hao Li, Haifeng Huang, <strong>Hanqing Wang</strong>, Tai Wang, Jiangmiao Pang</p>
+          
+          
+          <p class="pub-venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Mastering Scene Rearrangement with Expert-Assisted Curriculum Learning and Adaptive Trade-Off Tree-Search</h3>
+          
+          <p class="pub-authors">Zan Wang, <strong>Hanqing Wang</strong>, Wei Liang</p>
+          
+          
+          <p class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">GRUtopia: Dream General Robots in a City at Scale</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiahe Chen, Wensi Huang, Qingwei Ben, Tai Wang, et al.</p>
+          
+          
+          <p class="pub-venue">arXiv preprint, 2024</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2407.10943" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/InternRobotics/InternUtopia" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments</h3>
+          
+          <p class="pub-authors">Dong An, <strong>Hanqing Wang</strong>, Wenguan Wang, Zun Wang, Yan Huang, Keji He, Liang Wang</p>
+          
+          
+          <p class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2024</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-info">
+          <h3 class="pub-title">DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang, Luc Van Gool, Wenguan Wang</p>
+          
+          
+          <p class="pub-venue">International Conference on Computer Vision (ICCV), 2023</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/cqa_23/thumbnail.png" alt="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering</h3>
+          
+          <p class="pub-authors">Chuanqi Zang, <strong>Hanqing Wang</strong>, Mingtao Pei, Wei Liang</p>
+          
+          
+          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
+          
+          <div class="pub-links">
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/ap_23/thumbnail.png" alt="Active Perception for Visual-Language Navigation<br><br>">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Active Perception for Visual-Language Navigation<br><br></h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang, Steven C. H. Hoi, Jianbing Shen, Luc Van Gool</p>
+          
+          
+          <p class="pub-venue">International Journal of Computer Vision (IJCV), 2023</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://link.springer.com/article/10.1007/s11263-022-01721-6" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/mtn_22/thumbnail.png" alt="Towards Versatile Embodied Navigation<br><br>">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Towards Versatile Embodied Navigation<br><br></h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
+          
+          
+          <p class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2022</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2210.16822" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/VXN" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/ccc_22/thumbnail.png" alt="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
+          
+          
+          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://ieeexplore.ieee.org/document/9879110" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/CCC-VLN" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/ssm/thumbnail.png" alt="Structured Scene Memory for Vision-Language Navigation">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Structured Scene Memory for Vision-Language Navigation</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang and Jianbing Shen</p>
+          
+          
+          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021</p>
+          
+          <div class="pub-links">
+            
+            <a href="/assets/files/posts/ssm/ssm.pdf" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/SSM" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/mover/case.gif" alt="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
+          
+          
+          <p class="pub-venue">SIGGRAPH Asia 2020. ACM Trans. Graph., Vol. 39, No. 6, Article 233. Publication date: December 2020.</p>
+          
+          <div class="pub-links">
+            
+            <a href="/assets/files/posts/mover/mover.pdf" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/SceneMover" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            <a href="https://www.youtube.com/embed/zSM-s7zh-vk" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Demo
+            </a>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/active/logo.png" alt="Active Visual Information Gathering for Vision-Language Navigation">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Active Visual Information Gathering for Vision-Language Navigation</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Tianmin Shu, Wei Liang and Jianbing Shen</p>
+          
+          
+          <p class="pub-venue">Proceedings of the 16th European Conference on Computer Vision (ECCV), 2020</p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/abs/2007.08037" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            <a href="https://youtu.be/Ia7LtxsinrU" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Demo
+            </a>
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/3d_recon_19/result.png" alt="Deep Single-View 3D Object Reconstruction with Visual Hull Embedding">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Deep Single-View 3D Object Reconstruction with Visual Hull Embedding</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiaolong Yang, Wei Liang and Xin Tong</p>
+          
+          
+          <p class="pub-venue">Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019, <strong>(Oral)</strong></p>
+          
+          <div class="pub-links">
+            
+            <a href="https://arxiv.org/pdf/1809.03451.pdf" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            <a href="https://github.com/hanqingwangai/PSVH-3d-reconstruction" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Code
+            </a>
+            
+            
+            <a href="http://iitlab.bit.edu.cn/mcislab/~liangwei/projects/aaai19_3d_recon/assets/supplementary_2.mp4" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Demo
+            </a>
+            
+            
+            <a href="/assets/files/posts/3d_recon_19/Deep Single-View 3D Object Reconstruction with Visual Hull.pptx" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              Slides
+            </a>
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/transfer_17/thumbnail.png" alt="Transferring Objects: Joint Inference of Container and Human Pose">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Transferring Objects: Joint Inference of Container and Human Pose</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
+          
+          
+          <p class="pub-venue">Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2017</p>
+          
+          <div class="pub-links">
+            
+            <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Wang_Transferring_Objects_Joint_ICCV_2017_paper.pdf" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+      
+      <div class="pub-card reveal">
+        
+        <div class="pub-thumbnail">
+          <img src="/assets/files/posts/seg_16/framework.png" alt="Joint Labelling and Segmentation for 3D Scanned Human Body">
+        </div>
+        
+        <div class="pub-info">
+          <h3 class="pub-title">Joint Labelling and Segmentation for 3D Scanned Human Body</h3>
+          
+          <p class="pub-authors"><strong>Hanqing Wang</strong>, Changyang Li, Zikai Gao and Wei Liang</p>
+          
+          
+          <p class="pub-venue">SIGGRAPH ASIA 2016 Virtual Reality meets Physical Reality Workshop</p>
+          
+          <div class="pub-links">
+            
+            <a href="http://sigvr.org/hanqing.pdf" class="pub-link" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Paper
+            </a>
+            
+            
+            
+            
+          </div>
+        </div>
+      </div>
+      
+    
+  </div>
+</section>
+
+<!-- Recruiting CTA -->
+<div class="reveal">
+  <div class="cta-section">
+    <h2>Looking for Motivated Interns</h2>
+    <p>
+      I am currently looking for interns interested in <strong>robot learning</strong> and <strong>embodied AI</strong>. If you're excited about developing cutting-edge research in intelligent systems, let's talk.
+    </p>
+    <a href="mailto:hanqingwang.c@gmail.com" class="cta-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Get in Touch
+    </a>
+  </div>
 </div>
 
-<main class="g-container home-content">
-    <aside class="g-sidebar-wrapper">
-            <div class="g-sidebar">
-                <section class="author-card">
-                    <div class="avatar">
-                        <img src="/assets/img/profile.png" alt="">
-                    </div>
-                    <div class="author-name" rel="author">Hanqing Wang</div>
-                    <div class="bio">
-                        <p>Life is fantastic</p>
-                    </div>
-                    
-                    <ul id="sns-links" class="sns-links">
-                        
-                        <li>
-                            <a href="//github.com/hanqingwangai" target="_blank">
-                                <i class="iconfont icon-github"></i>
-                            </a>
-                        </li>
-                        
-                    </ul>
-                    
-                </section>
-    
-                
-                <section class="tags-card">
-                    
-                        
-                        <a href="tags.html#Semantic&nbspSegmentation" class="tag">Semantic&nbspSegmentation</a>
-                    
-                        
-                        <a href="tags.html#Graph&nbspCut" class="tag">Graph&nbspCut</a>
-                    
-                        
-                        <a href="tags.html#Functionality" class="tag">Functionality</a>
-                    
-                        
-                        <a href="tags.html#3D&nbspReconstruction" class="tag">3D&nbspReconstruction</a>
-                    
-                        
-                        <a href="tags.html#Computer&nbspVision" class="tag">Computer&nbspVision</a>
-                    
-                        
-                        <a href="tags.html#Deep&nbspLearning" class="tag">Deep&nbspLearning</a>
-                    
-                        
-                        <a href="tags.html#Embodied&nbspVision" class="tag">Embodied&nbspVision</a>
-                    
-                        
-                        <a href="tags.html#Vision-Language&nbspNavigation" class="tag">Vision-Language&nbspNavigation</a>
-                    
-                        
-                        <a href="tags.html#Scene&nbspArrangement" class="tag">Scene&nbspArrangement</a>
-                    
-                        
-                        <a href="tags.html#Reinforcement&nbspLearning" class="tag">Reinforcement&nbspLearning</a>
-                    
-                        
-                        <a href="tags.html#MCTS" class="tag">MCTS</a>
-                    
-                </section>
-                
+<!-- Scroll to Top -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span>&copy; 2019&ndash;2026 Hanqing Wang. All rights reserved.</span>
+            <div class="footer-social">
+                <a href="mailto:hanqingwang.c@gmail.com" aria-label="Email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
+                <a href="https://github.com/hanqingwangai" target="_blank" aria-label="GitHub">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://scholar.google.com/" target="_blank" aria-label="Google Scholar">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+                </a>
             </div>
-    
-            
-            <div class="search-card">
-                <input id="search_input" type="text" placeholder="Search..." autocomplete="off">
-                <i class="iconfont icon-search"></i>
-                <div class="search_result"></div>
-            </div>
-            
-            <br>
-            <div class="centeredbox">
-                <div class="countmap">
-                <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=n9KSOj4fZGAp-1Y3aBz7AUdF_DOVo294dsKsy0ip2QE&cl=ffffff&w=a"></script>
-                </div>
-            </div>
-    
-        </aside>
-    <h2>Recent News</h2><br>
-    <p>One paper has been accepted at CVPR 2023.</p>
-    <p>One paper has been accepted by IJCV.</p>
-    <p>One paper has been accepted at NeurIPS 2022 <b><font color="red">(Spotlight)</font></b>.</p>
-    <p>One paper has been accepted at CVPR 2022.</p>
-    <p>One paper has been accepted at CVPR 2021.</p>
-    <p>One paper has been accepted at SIGGRAPH Asia 2020.</p>
-    <p>One paper has been accepted at ECCV 2020.</p>
-    <p>One paper has been accepted at AAAI 2019 <b><font color="red">(Oral)</font></b>.</p>
-    <br><br>
-    <h2>About Me</h2><br>
-    <div class="article-list">
-    <div class="post-cover">
-    <p>Hi, I am Hanqing Wang - a fifth-year Ph.D. candidate in the <em>Media Computing and Intelligent Systems Laboratory at Beijing Institute of Technology</em>, Beijing. I am supervised by Prof. <a href="https://liangwei-bit.github.io/web/">Wei Liang</a>. In the past, I had the opportunity to collaborate with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai(Craig) Yu</a>, Director of the <em>Design Computing and Extended Reality Group</em> at George Mason University, Virginia.</p>
-    
-    <p>From March to November 2017, I interned at <em>Microsoft Research Asia</em> in the VC Group, under the mentorship of researcher <a href="http://jlyang.org/">Jiaolong Yang</a>. Subsequently, I was a research intern at the <em>Inception Institute of Artificial Intelligence (IIAI)</em> between July 2019 and April 2020, advised by Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>, the laboratory's lead scientist. Currently, I am a visiting student at <em>ETH Zürich</em> in the Computer Vision Lab, supervised by <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>.
-    </p>
-    <p>My research interests are primarily in the areas of Embodied AI and Vision+X.</p>
-    <p><br><a href="mailto:hanqingwang@bit.edu.cn">[Email]</a><a href="/assets/resume.pdf">[CV]</a></p>
-    </div>
-    <br>
-    <br>
-    </div>
-    
-    <h2>Publications</h2><br>
-    <div class="article-list">
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2023/03/17/cqa.html" title="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering"></a>
-                    <img src="/assets/files/posts/ssm/cover.png" href="/2023/03/17/cqa.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2023/03/17/cqa.html" title="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering"></a> -->
-                        <!-- <img src="/assets/files/posts/cqa_23/thumbnail.png" href="/2023/03/17/cqa.html" alt=""> -->
-                        <img src="/assets/files/posts/cqa_23/thumbnail.png"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2023/03/17/cqa.html" title="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering"></a> -->
-                        <!-- <a href="/2023/03/17/cqa.html" title="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering"> -->
-                        <h2 class="post-title">Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering</h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors">Chuanqi Zang, <strong>Hanqing Wang</strong>, Mingtao Pei, Wei Liang</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="">[paper]</a>
-                            
-                            
-                            
-                            <a href="">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Embodied&nbspVision class="post-tag">Embodied&nbspVision</a>
-                            
-                            <a href=tags.html#Computer&nbspVision class="post-tag">Computer&nbspVision</a>
-                            
-                            <a href=tags.html#Vision-Language&nbspNavigation class="post-tag">Vision-Language&nbspNavigation</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="23-03-17">17 Mar 2023</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2023/01/17/ap.html" title="Active Perception for Visual-Language Navigation<br><br>"></a>
-                    <img src="/assets/files/posts/ssm/cover.png" href="/2023/01/17/ap.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2023/01/17/ap.html" title="Active Perception for Visual-Language Navigation<br><br>"></a> -->
-                        <!-- <img src="/assets/files/posts/ap_23/thumbnail.png" href="/2023/01/17/ap.html" alt=""> -->
-                        <img src="/assets/files/posts/ap_23/thumbnail.png"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2023/01/17/ap.html" title="Active Perception for Visual-Language Navigation<br><br>"></a> -->
-                        <!-- <a href="/2023/01/17/ap.html" title="Active Perception for Visual-Language Navigation<br><br>"> -->
-                        <h2 class="post-title">Active Perception for Visual-Language Navigation<br><br></h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang, Steven C. H. Hoi, Jianbing Shen, Luc Van Gool</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">International Journal of Computer Vision (IJCV), 2023<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="https://link.springer.com/article/10.1007/s11263-022-01721-6">[paper]</a>
-                            
-                            
-                            
-                            <a href="https://github.com/HanqingWangAI/Active_VLN">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Embodied&nbspVision class="post-tag">Embodied&nbspVision</a>
-                            
-                            <a href=tags.html#Computer&nbspVision class="post-tag">Computer&nbspVision</a>
-                            
-                            <a href=tags.html#Vision-Language&nbspNavigation class="post-tag">Vision-Language&nbspNavigation</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="23-01-17">17 Jan 2023</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2022/09/17/mtn.html" title="Towards Versatile Embodied Navigation<br><br>"></a>
-                    <img src="/assets/files/posts/ssm/cover.png" href="/2022/09/17/mtn.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2022/09/17/mtn.html" title="Towards Versatile Embodied Navigation<br><br>"></a> -->
-                        <!-- <img src="/assets/files/posts/mtn_22/thumbnail.png" href="/2022/09/17/mtn.html" alt=""> -->
-                        <img src="/assets/files/posts/mtn_22/thumbnail.png"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2022/09/17/mtn.html" title="Towards Versatile Embodied Navigation<br><br>"></a> -->
-                        <!-- <a href="/2022/09/17/mtn.html" title="Towards Versatile Embodied Navigation<br><br>"> -->
-                        <h2 class="post-title">Towards Versatile Embodied Navigation<br><br></h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">Conference on Neural Information Processing Systems (NeurIPS), 2022<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="https://arxiv.org/abs/2210.16822">[paper]</a>
-                            
-                            
-                            
-                            <a href="https://github.com/HanqingWangAI/VXN">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Embodied&nbspVision class="post-tag">Embodied&nbspVision</a>
-                            
-                            <a href=tags.html#Computer&nbspVision class="post-tag">Computer&nbspVision</a>
-                            
-                            <a href=tags.html#Vision-Language&nbspNavigation class="post-tag">Vision-Language&nbspNavigation</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="22-09-17">17 Sep 2022</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2022/05/17/ccc.html" title="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation"></a>
-                    <img src="/assets/files/posts/ssm/cover.png" href="/2022/05/17/ccc.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2022/05/17/ccc.html" title="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation"></a> -->
-                        <!-- <img src="/assets/files/posts/ccc_22/thumbnail.png" href="/2022/05/17/ccc.html" alt=""> -->
-                        <img src="/assets/files/posts/ccc_22/thumbnail.png"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2022/05/17/ccc.html" title="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation"></a> -->
-                        <!-- <a href="/2022/05/17/ccc.html" title="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation"> -->
-                        <h2 class="post-title">Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation</h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="https://ieeexplore.ieee.org/document/9879110">[paper]</a>
-                            
-                            
-                            
-                            <a href="https://github.com/HanqingWangAI/CCC-VLN">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Embodied&nbspVision class="post-tag">Embodied&nbspVision</a>
-                            
-                            <a href=tags.html#Computer&nbspVision class="post-tag">Computer&nbspVision</a>
-                            
-                            <a href=tags.html#Vision-Language&nbspNavigation class="post-tag">Vision-Language&nbspNavigation</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="22-05-17">17 May 2022</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2021/05/17/ssm.html" title="Structured Scene Memory for Vision-Language Navigation"></a>
-                    <img src="/assets/files/posts/ssm/cover.png" href="/2021/05/17/ssm.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2021/05/17/ssm.html" title="Structured Scene Memory for Vision-Language Navigation"></a> -->
-                        <!-- <img src="/assets/files/posts/ssm/thumbnail.png" href="/2021/05/17/ssm.html" alt=""> -->
-                        <img src="/assets/files/posts/ssm/thumbnail.png"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2021/05/17/ssm.html" title="Structured Scene Memory for Vision-Language Navigation"></a> -->
-                        <!-- <a href="/2021/05/17/ssm.html" title="Structured Scene Memory for Vision-Language Navigation"> -->
-                        <h2 class="post-title">Structured Scene Memory for Vision-Language Navigation</h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang and Jianbing Shen</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="/assets/files/posts/ssm/ssm.pdf">[paper]</a>
-                            
-                            
-                            
-                            <a href="https://github.com/HanqingWangAI/SSM">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Embodied&nbspVision class="post-tag">Embodied&nbspVision</a>
-                            
-                            <a href=tags.html#Computer&nbspVision class="post-tag">Computer&nbspVision</a>
-                            
-                            <a href=tags.html#Vision-Language&nbspNavigation class="post-tag">Vision-Language&nbspNavigation</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="21-05-17">17 May 2021</time>
-                </footer>
-            </article>
-        
-            <article class="article-item">
-                <!-- 
-                <div class="post-cover">
-                    <a class="post-link" href="/2020/07/30/mover.html" title="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning"></a>
-                    <img src="/assets/files/posts/mover/cover.png" href="/2020/07/30/mover.html" alt="">
-                </div>
-                 -->
-                <div>
-                    
-                    <section class="post-thumbnail">
-                        <!-- <a class="post-link" href="/2020/07/30/mover.html" title="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning"></a> -->
-                        <!-- <img src="/assets/files/posts/mover/case.gif" href="/2020/07/30/mover.html" alt=""> -->
-                        <img src="/assets/files/posts/mover/case.gif"  alt="">
-                    </section>
-                    
-                    <section class="post-preview">
-                        <!-- <a class="post-link" href="/2020/07/30/mover.html" title="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning"></a> -->
-                        <!-- <a href="/2020/07/30/mover.html" title="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning"> -->
-                        <h2 class="post-title">Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning</h2>
-                        <!-- </a> -->
-                        
-                        <p class="post-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
-                        
-                        <!--  -->
-                        <!-- 
-                        <p class="post-excerpt"></p>
-                         -->
-                        
-                        <p class="post-venue">SIGGRAPH Asia 2020. ACM Trans. Graph., Vol. 39, No. 6, Article 233. Publication date: December 2020.<br><br></p>
-                        
-                        <div>
-                            
-                            <a href="/assets/files/posts/mover/mover.pdf">[paper]</a>
-                            
-                            
-                            <a href="https://www.youtube.com/embed/zSM-s7zh-vk">[demo]</a>
-                            
-                            
-                            <a href="https://github.com/HanqingWangAI/SceneMover">[code]</a>
-                            
-                            
-                        </div>
-                    </section>
-                </div>
-                <footer class="post-meta">
-                    <div class="post-tags">
-                        
-                            
-                            <a href=tags.html#Scene&nbspArrangement class="post-tag">Scene&nbspArrangement</a>
-                            
-                            <a href=tags.html#Reinforcement&nbspLearning class="post-tag">Reinforcement&nbspLearning</a>
-                            
-                            <a href=tags.html#MCTS class="post-tag">MCTS</a>
-                            
-                        
-                    </div>
-                    <time class="post-date" datetime="20-07-30">30 Jul 2020</time>
-                </footer>
-            </article>
-        
+        </div>
+    </footer>
 
-        
-            <nav class="pagination">
-    <input type="hidden" id="total_pages" value="2">
-    <input type="hidden" id="current_pages" value="1">
-    <input type="hidden" id="base_url" value="/">
-    <div class="page-links">
-        
-        <div id="page-link-container"></div>
-        
-        <a href="/page2/" class="page-link">&raquo;</a>
-        
-    </div>
-</nav>
+    <!-- Scripts -->
+    <script>
+    // Dark mode toggle
+    (function() {
+        const toggle = document.getElementById('themeToggle');
+        const icon = toggle.querySelector('.toggle-icon');
+        const saved = localStorage.getItem('theme');
 
-        
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            icon.textContent = '\u2600';
+        }
 
-    </div>
-    
+        toggle.addEventListener('click', function() {
+            const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+            if (isDark) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                icon.textContent = '\u263E';
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                icon.textContent = '\u2600';
+            }
+        });
+    })();
 
-    
-    
-</main>
+    // Scroll reveal
+    (function() {
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-<footer class="g-footer">
-  <section>Hanqing's blog ©
-  
-  
-    2019
-    -
-  
-  2023
-  </section>
-  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>
-</footer>
+        reveals.forEach(function(el) { observer.observe(el); });
+    })();
 
+    // Scroll to top
+    (function() {
+        const btn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+        btn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    })();
 
-
-    </div>
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/assets/js/prism.js"></script>
-    <script src="/assets/js/index.min.js"></script>
+    // Smooth scroll for nav links
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    </script>
 </body>
 </html>

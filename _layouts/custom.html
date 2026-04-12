@@ -125,6 +125,41 @@
             }
         });
     });
+
+    // Publication sidebar: click to scroll + active tracking
+    (function() {
+        var sidebarItems = document.querySelectorAll('.pub-sidebar-item');
+        if (!sidebarItems.length) return;
+
+        // Click to smooth scroll
+        sidebarItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.getElementById(item.getAttribute('data-target'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+
+        // Intersection observer to highlight active item
+        var pubCards = document.querySelectorAll('.pub-card[id]');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var id = entry.target.id;
+                var link = document.querySelector('.pub-sidebar-item[data-target="' + id + '"]');
+                if (link) {
+                    if (entry.isIntersecting) {
+                        sidebarItems.forEach(function(s) { s.classList.remove('active'); });
+                        link.classList.add('active');
+                        link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    }
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+
+        pubCards.forEach(function(card) { observer.observe(card); });
+    })();
     </script>
 </body>
 </html>

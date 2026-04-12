@@ -9,5 +9,8 @@ venue: "arXiv preprint, 2026"
 paper: 'https://arxiv.org/abs/2601.02456'
 project: 'https://internrobotics.github.io/internvla-a1.github.io/'
 code: 'https://github.com/InternRobotics/InternVLA-A1'
+badges:
+  - "VLA"
+  - "Manipulation"
 tags: "Vision-Language-Action Robotics Manipulation"
 ---

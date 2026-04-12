@@ -9,5 +9,8 @@ venue: "arXiv preprint, 2025"
 paper: 'https://arxiv.org/abs/2510.13778'
 project: 'https://internrobotics.github.io/internvla-m1.github.io/'
 code: 'https://github.com/InternRobotics/InternVLA-M1'
+badges:
+  - "VLA"
+  - "Manipulation"
 tags: "Vision-Language-Action Generalist&nbspPolicy Robotics"
 ---

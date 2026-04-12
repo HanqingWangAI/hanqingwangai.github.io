@@ -9,5 +9,9 @@ venue: "arXiv preprint, 2025"
 paper: 'https://arxiv.org/abs/2512.22342'
 project: 'https://0309hws.github.io/VL-LN.github.io/'
 code: 'https://github.com/InternRobotics/VL-LN'
+badges:
+  - "VLN"
+  - "Benchmark"
+  - "Dialog"
 tags: "Vision-Language&nbspNavigation Embodied&nbspAI"
 ---

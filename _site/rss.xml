@@ -3,10 +3,10 @@
   <channel>
     <title>Hanqing Wang</title>
     <description>Researcher at Shanghai AI Laboratory. Research in robot learning and embodied AI.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 12 Apr 2026 00:48:41 +0800</pubDate>
-    <lastBuildDate>Sun, 12 Apr 2026 00:48:41 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 12 Apr 2026 11:04:59 +0800</pubDate>
+    <lastBuildDate>Sun, 12 Apr 2026 11:04:59 +0800</lastBuildDate>
     <generator>Jekyll v4.4.1</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>
 </description>
         <pubDate>Sun, 08 Feb 2026 00:00:00 +0800</pubDate>
-        <link>/2026/02/08/sim1.html</link>
-        <guid isPermaLink="true">/2026/02/08/sim1.html</guid>
+        <link>http://localhost:4000/2026/02/08/sim1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/02/08/sim1.html</guid>
         
         <category>Simulation</category>
         
@@ -29,8 +29,8 @@
         <description>
 </description>
         <pubDate>Wed, 28 Jan 2026 00:00:00 +0800</pubDate>
-        <link>/2026/01/28/tac2real.html</link>
-        <guid isPermaLink="true">/2026/01/28/tac2real.html</guid>
+        <link>http://localhost:4000/2026/01/28/tac2real.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/01/28/tac2real.html</guid>
         
         <category>Simulation</category>
         
@@ -46,8 +46,8 @@
         <description>
 </description>
         <pubDate>Sun, 04 Jan 2026 00:00:00 +0800</pubDate>
-        <link>/2026/01/04/internvla-a1.html</link>
-        <guid isPermaLink="true">/2026/01/04/internvla-a1.html</guid>
+        <link>http://localhost:4000/2026/01/04/internvla-a1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2026/01/04/internvla-a1.html</guid>
         
         <category>Vision-Language-Action</category>
         
@@ -63,8 +63,8 @@
         <description>
 </description>
         <pubDate>Sun, 28 Dec 2025 00:00:00 +0800</pubDate>
-        <link>/2025/12/28/vl-ln-bench.html</link>
-        <guid isPermaLink="true">/2025/12/28/vl-ln-bench.html</guid>
+        <link>http://localhost:4000/2025/12/28/vl-ln-bench.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/12/28/vl-ln-bench.html</guid>
         
         <category>Vision-Language&amp;nbspNavigation</category>
         
@@ -78,8 +78,8 @@
         <description>
 </description>
         <pubDate>Sat, 01 Nov 2025 00:00:00 +0800</pubDate>
-        <link>/2025/11/01/l2s.html</link>
-        <guid isPermaLink="true">/2025/11/01/l2s.html</guid>
+        <link>http://localhost:4000/2025/11/01/l2s.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/11/01/l2s.html</guid>
         
         <category>3D&amp;nbspVisual&amp;nbspGrounding</category>
         
@@ -93,8 +93,8 @@
         <description>
 </description>
         <pubDate>Fri, 17 Oct 2025 00:00:00 +0800</pubDate>
-        <link>/2025/10/17/internvla-m1.html</link>
-        <guid isPermaLink="true">/2025/10/17/internvla-m1.html</guid>
+        <link>http://localhost:4000/2025/10/17/internvla-m1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/10/17/internvla-m1.html</guid>
         
         <category>Vision-Language-Action</category>
         
@@ -110,8 +110,8 @@
         <description>
 </description>
         <pubDate>Wed, 01 Oct 2025 00:00:00 +0800</pubDate>
-        <link>/2025/10/01/embodied-gap.html</link>
-        <guid isPermaLink="true">/2025/10/01/embodied-gap.html</guid>
+        <link>http://localhost:4000/2025/10/01/embodied-gap.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/10/01/embodied-gap.html</guid>
         
         <category>Vision-Language&amp;nbspNavigation</category>
         
@@ -125,8 +125,8 @@
         <description>
 </description>
         <pubDate>Fri, 12 Sep 2025 00:00:00 +0800</pubDate>
-        <link>/2025/09/12/internscenes.html</link>
-        <guid isPermaLink="true">/2025/09/12/internscenes.html</guid>
+        <link>http://localhost:4000/2025/09/12/internscenes.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/09/12/internscenes.html</guid>
         
         <category>3D&amp;nbspScene</category>
         
@@ -142,8 +142,8 @@
         <description>
 </description>
         <pubDate>Mon, 07 Jul 2025 00:00:00 +0800</pubDate>
-        <link>/2025/07/07/streamvln.html</link>
-        <guid isPermaLink="true">/2025/07/07/streamvln.html</guid>
+        <link>http://localhost:4000/2025/07/07/streamvln.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/07/07/streamvln.html</guid>
         
         <category>Vision-Language&amp;nbspNavigation</category>
         
@@ -157,8 +157,8 @@
         <description>
 </description>
         <pubDate>Sun, 01 Jun 2025 00:00:00 +0800</pubDate>
-        <link>/2025/06/01/genmanip.html</link>
-        <guid isPermaLink="true">/2025/06/01/genmanip.html</guid>
+        <link>http://localhost:4000/2025/06/01/genmanip.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2025/06/01/genmanip.html</guid>
         
         <category>Simulation</category>
         

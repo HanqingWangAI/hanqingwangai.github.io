@@ -1,0 +1,18 @@
+<h1 id="purpose">purpose</h1>
+<p>unsupervised learning of complicated distributions.</p>
+
+<p>generative model: One straightforward kind of generative model simply allows us to compute P(X) numerically.</p>
+
+<p>VAEs have already shown promise in generating many kinds of complicated data, including handwritten digits, faces, house numbers, CIFAR images, physical models of scenes, segmentation, and predicting the future from static images.</p>
+
+<h3 id="characteristics-of-vae">Characteristics of VAE</h3>
+<ul>
+  <li>Weak assumption</li>
+  <li>Fast training</li>
+</ul>
+
+<h3 id="latent-variable-models">Latent Variable Models</h3>
+<ul>
+  <li>Take hand written document as an example, Intuitively, it helps if the model first decides which character to generate before it assigns a value to any specific pixel. This kind of decision is formally called a latent variable, annotated as $z$. $z$ is called latent since given just a character produced by the model, we don’t necessarily know which settings of the latent variables generated the character.</li>
+</ul>
+

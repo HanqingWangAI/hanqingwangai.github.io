@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Hanqing Wang">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/page4/">
+    <meta property="og:url" content="http://localhost:4000/page4/">
     <meta property="og:description" content="Research Scientist at Shanghai AI Laboratory">
     <meta property="og:site_name" content="Hanqing Wang">
     <!-- Fonts -->
@@ -47,9 +47,14 @@
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Hanqing <span class="gradient-text">Wang</span></h1>
       <p class="hero-title">Research Scientist &middot; Shanghai AI Laboratory</p>
-      <p class="hero-desc">
-        I lead the Digital Modeling and Simulation Platform Team at the Embodied AI Center. My research focuses on <strong>embodied navigation</strong>, <strong>generalist robot policies</strong>, and <strong>large-scale simulation</strong> for embodied AI.
-      </p>
+      <div class="hero-bio">
+        <p>
+          I am a Research Scientist at the <strong>Shanghai Artificial Intelligence Laboratory</strong>, where I lead the <em>Digital Modeling and Simulation Platform Team</em> at the Embodied AI Center. My research spans embodied navigation and perception, generalist robot policies, and large-scale simulators and benchmarks for embodied AI.
+        </p>
+        <p>
+          I received my Ph.D. in Computer Science from the Beijing Institute of Technology in 2024, advised by Prof. <a href="https://liangwei-bit.github.io/web/">Wei Liang</a>. During my Ph.D., I was a visiting student at <strong>ETH Zürich</strong>'s Computer Vision Lab (2021–2023), supervised by Prof. <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>. I also collaborated with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai (Craig) Yu</a> at George Mason University and held research internships at <strong>Microsoft Research Asia</strong> (with <a href="http://jlyang.org/">Jiaolong Yang</a>) and the Inception Institute of Artificial Intelligence (with Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>).
+        </p>
+      </div>
       <div class="hero-links">
         <a href="mailto:hanqingwang.c@gmail.com" class="hero-btn primary">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -75,19 +80,6 @@
   </div>
 </section>
 
-<!-- About Section -->
-<section class="section reveal" id="about">
-  <h2 class="section-title">About Me</h2>
-  <p class="section-subtitle">Background & Research</p>
-  <div style="font-size: 1.02rem; color: var(--text-secondary); line-height: 1.9; max-width: 900px;">
-    <p>
-      I am a Research Scientist at the <strong>Shanghai Artificial Intelligence Laboratory</strong>, where I lead the <em>Digital Modeling and Simulation Platform Team</em> at the Embodied AI Center. My research spans embodied navigation and perception, generalist robot policies, and large-scale simulators and benchmarks for embodied AI.    </p>
-    <p style="margin-top: 1rem;">
-      I received my Ph.D. in Computer Science from the <em>Media Computing and Intelligent Systems Laboratory</em> at the Beijing Institute of Technology in 2024, advised by Prof. <a href="https://liangwei-bit.github.io/web/">Wei Liang</a>. During my Ph.D., I was a visiting student at <strong>ETH Zürich</strong>'s Computer Vision Lab (2021–2023), supervised by Prof. <a href="https://ee.ethz.ch/the-department/faculty/professors/person-detail.OTAyMzM=.TGlzdC80MTEsMTA1ODA0MjU5.html">Luc Van Gool</a> and Prof. <a href="https://sites.google.com/view/wenguanwang/">Wenguan Wang</a>. I also collaborated with Prof. <a href="https://craigyuyu.github.io/home/">Lap-Fai (Craig) Yu</a> at George Mason University and held research internships at <strong>Microsoft Research Asia</strong> (with <a href="http://jlyang.org/">Jiaolong Yang</a>) and the Inception Institute of Artificial Intelligence (with Prof. <a href="https://www.researchgate.net/profile/Jianbing_Shen">Jianbing Shen</a>).
-    </p>
-  </div>
-</section>
-
 <!-- News Section -->
 <section class="section reveal" id="news">
   <h2 class="section-title">News</h2>
@@ -104,10 +96,6 @@
     <li class="news-item">
       <span class="news-date">2024.07</span>
       Released <a href="https://github.com/InternRobotics/InternUtopia" class="news-highlight">GRUtopia</a> (a.k.a. 桃源, later renamed <strong>InternUtopia</strong>) — a large-scale simulation platform for general-purpose embodied AI research.
-    </li>
-    <li class="news-item">
-      <span class="news-date">2024.06</span>
-      Received my Ph.D. and was named <strong>Beijing Outstanding Doctoral Graduate</strong> (Top 5%) with an Outstanding Doctoral Dissertation award from BIT.
     </li>
     <li class="news-item">
       <span class="news-date">2024</span>
@@ -132,913 +120,1481 @@
 <section class="section reveal" id="publications">
   <h2 class="section-title">Publications</h2>
   <p class="section-subtitle">Selected research papers</p>
-  <div class="pub-grid">
-    
+  <div class="pub-layout">
+    <!-- Sidebar Navigation -->
+    <nav class="pub-sidebar" id="pubSidebar">
       
-      <div class="pub-card reveal">
+      
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/sim1/thumbnail.gif" alt="SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds">
-        </div>
         
-        <div class="pub-info">
-          <h3 class="pub-title">SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds</h3>
+        
           
-          <p class="pub-authors">Yunsong Zhou, Hangxu Liu, Xuekun Jiang, Xing Shen, Yuanzhen Zhou, Hui Wang, Baole Fang, Yang Tian, Mulin Yu, Qiaojun Yu, Li Ma, Hengjie Li, <strong>Hanqing Wang</strong>, Jia Zeng, Jiangmiao Pang</p>
+          <div class="pub-sidebar-year">2026</div>
+        
+        <a href="#pub-sim1" class="pub-sidebar-item" data-target="pub-sim1">
+          SIM1
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-tac2real" class="pub-sidebar-item" data-target="pub-tac2real">
+          Tac2Real
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-internvla-a1" class="pub-sidebar-item" data-target="pub-internvla-a1">
+          InternVLA-A1
+        </a>
+        
+      
+        
+        
+        
           
+          <div class="pub-sidebar-year">2025</div>
+        
+        <a href="#pub-vl-ln-bench" class="pub-sidebar-item" data-target="pub-vl-ln-bench">
+          VL-LN Bench
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-l2s" class="pub-sidebar-item" data-target="pub-l2s">
+          Language-to-Space Programming for Tra...
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-internvla-m1" class="pub-sidebar-item" data-target="pub-internvla-m1">
+          InternVLA-M1
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-embodied-gap" class="pub-sidebar-item" data-target="pub-embodied-gap">
+          Rethinking the Embodied Gap in Vision...
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-internscenes" class="pub-sidebar-item" data-target="pub-internscenes">
+          InternScenes
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-streamvln" class="pub-sidebar-item" data-target="pub-streamvln">
+          StreamVLN
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-genmanip" class="pub-sidebar-item" data-target="pub-genmanip">
+          GenManip
+        </a>
+        
+      
+        
+        
+        
           
-          <p class="pub-venue">arXiv preprint, 2026</p>
+          <div class="pub-sidebar-year">2024</div>
+        
+        <a href="#pub-scene-rearrangement" class="pub-sidebar-item" data-target="pub-scene-rearrangement">
+          Mastering Scene Rearrangement with Ex...
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-grutopia" class="pub-sidebar-item" data-target="pub-grutopia">
+          GRUtopia
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-etpnav" class="pub-sidebar-item" data-target="pub-etpnav">
+          ETPNav
+        </a>
+        
+      
+        
+        
+        
           
-          <div class="pub-links">
+          <div class="pub-sidebar-year">2023</div>
+        
+        <a href="#pub-dreamwalker" class="pub-sidebar-item" data-target="pub-dreamwalker">
+          DREAMWALKER
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-cqa" class="pub-sidebar-item" data-target="pub-cqa">
+          Discovering the Real Association
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-ap" class="pub-sidebar-item" data-target="pub-ap">
+          Active Perception for Visual-Language...
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2022</div>
+        
+        <a href="#pub-mtn" class="pub-sidebar-item" data-target="pub-mtn">
+          Towards Versatile Embodied Navigation
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-ccc" class="pub-sidebar-item" data-target="pub-ccc">
+          Counterfactual Cycle-Consistent Learn...
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2021</div>
+        
+        <a href="#pub-ssm" class="pub-sidebar-item" data-target="pub-ssm">
+          Structured Scene Memory for Vision-La...
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2020</div>
+        
+        <a href="#pub-mover" class="pub-sidebar-item" data-target="pub-mover">
+          Scene Mover
+        </a>
+        
+      
+        
+        
+        
+        <a href="#pub-active" class="pub-sidebar-item" data-target="pub-active">
+          Active Visual Information Gathering f...
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2019</div>
+        
+        <a href="#pub-3d-recon" class="pub-sidebar-item" data-target="pub-3d-recon">
+          Deep Single-View 3D Object Reconstruc...
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2017</div>
+        
+        <a href="#pub-transfer" class="pub-sidebar-item" data-target="pub-transfer">
+          Transferring Objects
+        </a>
+        
+      
+        
+        
+        
+          
+          <div class="pub-sidebar-year">2016</div>
+        
+        <a href="#pub-labelling" class="pub-sidebar-item" data-target="pub-labelling">
+          Joint Labelling and Segmentation for ...
+        </a>
+        
+      
+    </nav>
+
+    <!-- Publication Cards -->
+    <div class="pub-grid">
+      
+      
+        
+        
+        
+          
+          <div class="pub-year-divider" id="pub-year-2026">
+            <span>2026</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-sim1">
+          
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/sim1/thumbnail.gif" alt="SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds">
+          </div>
+          
+          <div class="pub-info">
+            <h3 class="pub-title">SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds</h3>
             
-            <a href="https://arxiv.org/abs/2604.08544" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Yunsong Zhou, Hangxu Liu, Xuekun Jiang, Xing Shen, Yuanzhen Zhou, Hui Wang, Baole Fang, Yang Tian, Mulin Yu, Qiaojun Yu, Li Ma, Hengjie Li, <strong>Hanqing Wang</strong>, Jia Zeng, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/SIM1" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2026</p>
             
             
-            <a href="https://internrobotics.github.io/sim1.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Simulation</span>
+              
+              <span class="pub-badge ">Sim-to-Real</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2604.08544" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/SIM1" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://internrobotics.github.io/sim1.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/tac2real/thumbnail.svg" alt="Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-tac2real">
           
-          <p class="pub-authors">Ningyu Yan, Shuai Wang, Xing Shen, Hui Wang, <strong>Hanqing Wang</strong>&dagger;, Yang Xiang, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/tac2real/thumbnail.svg" alt="Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2026</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Tac2Real: Reliable and GPU Visuotactile Simulation for Online Reinforcement Learning and Zero-Shot Real-World Deployment</h3>
             
-            <a href="https://arxiv.org/abs/2603.28475" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Ningyu Yan, Shuai Wang, Xing Shen, Hui Wang, <strong>Hanqing Wang</strong>&dagger;, Yang Xiang, Jiangmiao Pang</p>
             
             
-            
-            <a href="https://ningyurichard.github.io/tac2real-project-page/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <p class="pub-venue">arXiv preprint, 2026</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Tactile</span>
+              
+              <span class="pub-badge ">Sim-to-Real</span>
+              
+              <span class="pub-badge ">RL</span>
+              
+            </div>
             
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2603.28475" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/Tac2Real" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://ningyurichard.github.io/tac2real-project-page/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/internvla-a1/thumbnail.jpg" alt="InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-internvla-a1">
           
-          <p class="pub-authors">Junhao Cai, Zetao Cai, Jiafei Cao, Yilun Chen, <strong>Hanqing Wang</strong>, et al.</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/internvla-a1/thumbnail.jpg" alt="InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2026</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">InternVLA-A1: Unifying Understanding, Generation and Action for Robotic Manipulation</h3>
             
-            <a href="https://arxiv.org/abs/2601.02456" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Junhao Cai, Zetao Cai, Jiafei Cao, Yilun Chen, <strong>Hanqing Wang</strong>, et al.</p>
             
             
-            <a href="https://github.com/InternRobotics/InternVLA-A1" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2026</p>
             
             
-            <a href="https://internrobotics.github.io/internvla-a1.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLA</span>
+              
+              <span class="pub-badge ">Manipulation</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2601.02456" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/InternVLA-A1" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://internrobotics.github.io/internvla-a1.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/vl-ln-bench/thumbnail.png" alt="VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs</h3>
+        
+        
           
-          <p class="pub-authors">Wensi Huang, Shaohao Zhu, Meng Wei, Jinming Xu, Xihui Liu, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Feng Zhao, Jiangmiao Pang</p>
+          <div class="pub-year-divider" id="pub-year-2025">
+            <span>2025</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-vl-ln-bench">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/vl-ln-bench/thumbnail.png" alt="VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs">
+          </div>
           
-          <p class="pub-venue">arXiv preprint, 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">VL-LN Bench: Towards Long-horizon Goal-oriented Navigation with Active Dialogs</h3>
             
-            <a href="https://arxiv.org/abs/2512.22342" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Wensi Huang, Shaohao Zhu, Meng Wei, Jinming Xu, Xihui Liu, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Feng Zhao, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/VL-LN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2025</p>
             
             
-            <a href="https://0309hws.github.io/VL-LN.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Benchmark</span>
+              
+              <span class="pub-badge ">Dialog</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2512.22342" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/VL-LN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://0309hws.github.io/VL-LN.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/l2s/thumbnail.png" alt="Language-to-Space Programming for Training-Free 3D Visual Grounding">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Language-to-Space Programming for Training-Free 3D Visual Grounding</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-l2s">
           
-          <p class="pub-authors">Boyu Mi, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Yilun Chen, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/l2s/thumbnail.png" alt="Language-to-Space Programming for Training-Free 3D Visual Grounding">
+          </div>
           
-          
-          <p class="pub-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Language-to-Space Programming for Training-Free 3D Visual Grounding</h3>
             
-            <a href="https://arxiv.org/abs/2502.01401" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Boyu Mi, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Yilun Chen, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/LaSP" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">3D Grounding</span>
+              
+              <span class="pub-badge ">LLM</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2502.01401" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/LaSP" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/internvla-m1/thumbnail.png" alt="InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-internvla-m1">
           
-          <p class="pub-authors">Xinyi Chen, Yilun Chen, Yanwei Fu, Ning Gao, <strong>Hanqing Wang</strong>, et al.</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/internvla-m1/thumbnail.png" alt="InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</h3>
             
-            <a href="https://arxiv.org/abs/2510.13778" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Xinyi Chen, Yilun Chen, Yanwei Fu, Ning Gao, <strong>Hanqing Wang</strong>, et al.</p>
             
             
-            <a href="https://github.com/InternRobotics/InternVLA-M1" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2025</p>
             
             
-            <a href="https://internrobotics.github.io/internvla-m1.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLA</span>
+              
+              <span class="pub-badge ">Manipulation</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2510.13778" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/InternVLA-M1" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://internrobotics.github.io/internvla-m1.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/embodied-gap/thumbnail.png" alt="Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-embodied-gap">
           
-          <p class="pub-authors">Liuyi Wang, Xinyuan Xia, Hui Zhao, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Yilun Chen, Chengju Liu, Qijun Chen, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/embodied-gap/thumbnail.png" alt="Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities">
+          </div>
           
-          
-          <p class="pub-venue">International Conference on Computer Vision (ICCV), 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities</h3>
             
-            <a href="https://arxiv.org/abs/2507.13019" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Liuyi Wang, Xinyuan Xia, Hui Zhao, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Yilun Chen, Chengju Liu, Qijun Chen, Jiangmiao Pang</p>
             
             
-            
-            <a href="https://crystalsixone.github.io/vln_pe.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <p class="pub-venue">International Conference on Computer Vision (ICCV), 2025</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Embodied AI</span>
+              
+              <span class="pub-badge ">Benchmark</span>
+              
+            </div>
             
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2507.13019" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              
+              <a href="https://crystalsixone.github.io/vln_pe.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/internscenes/thumbnail.png" alt="InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-internscenes">
           
-          <p class="pub-authors">Weipeng Zhong, Peizhou Cao, Yichen Jin, Li Luo, Wenzhe Cai, Jingli Lin, <strong>Hanqing Wang</strong>, Zhaoyang Lyu, Tai Wang, Bo Dai, Xudong Xu, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/internscenes/thumbnail.png" alt="InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">InternScenes: A Large-Scale Simulatable Indoor Scene Dataset with Realistic Layouts</h3>
             
-            <a href="https://arxiv.org/abs/2509.10813" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Weipeng Zhong, Peizhou Cao, Yichen Jin, Li Luo, Wenzhe Cai, Jingli Lin, <strong>Hanqing Wang</strong>, Zhaoyang Lyu, Tai Wang, Bo Dai, Xudong Xu, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/InternScenes" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2025</p>
             
             
-            <a href="https://marjordcpz.github.io/InternScenes.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">3D Scene</span>
+              
+              <span class="pub-badge ">Dataset</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2509.10813" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/InternScenes" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://marjordcpz.github.io/InternScenes.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/streamvln/thumbnail.gif" alt="StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-streamvln">
           
-          <p class="pub-authors">Meng Wei, Chenyang Wan, Xiqian Yu, Tai Wang, Yuqiang Yang, Xiaohan Mao, Chenming Zhu, Wenzhe Cai, <strong>Hanqing Wang</strong>, Yilun Chen, Xihui Liu, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/streamvln/thumbnail.gif" alt="StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling</h3>
             
-            <a href="https://arxiv.org/abs/2507.05240" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Meng Wei, Chenyang Wan, Xiqian Yu, Tai Wang, Yuqiang Yang, Xiaohan Mao, Chenming Zhu, Wenzhe Cai, <strong>Hanqing Wang</strong>, Yilun Chen, Xihui Liu, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/StreamVLN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2025</p>
             
             
-            <a href="https://streamvln.github.io/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Streaming</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2507.05240" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/StreamVLN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://streamvln.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/genmanip/thumbnail.png" alt="GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-genmanip">
           
-          <p class="pub-authors">Ning Gao, Yilun Chen, Shuai Yang, Xinyi Chen, Yang Tian, Hao Li, Haifeng Huang, <strong>Hanqing Wang</strong>, Tai Wang, Jiangmiao Pang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/genmanip/thumbnail.png" alt="GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation">
+          </div>
           
-          
-          <p class="pub-venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">GenManip: LLM-driven Simulation for Generalizable Instruction-Following Manipulation</h3>
             
-            <a href="https://arxiv.org/abs/2506.10966" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Ning Gao, Yilun Chen, Shuai Yang, Xinyi Chen, Yang Tian, Hao Li, Haifeng Huang, <strong>Hanqing Wang</strong>, Tai Wang, Jiangmiao Pang</p>
             
             
-            <a href="https://github.com/InternRobotics/GenManip" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">Conference on Computer Vision and Pattern Recognition (CVPR), 2025</p>
             
             
-            <a href="https://genmanip.com/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Manipulation</span>
+              
+              <span class="pub-badge ">Simulation</span>
+              
+              <span class="pub-badge ">LLM</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2506.10966" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/GenManip" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://genmanip.com/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-info">
-          <h3 class="pub-title">Mastering Scene Rearrangement with Expert-Assisted Curriculum Learning and Adaptive Trade-Off Tree-Search</h3>
+      
+        
+        
+        
           
-          <p class="pub-authors">Zan Wang, <strong>Hanqing Wang</strong>, Wei Liang</p>
+          <div class="pub-year-divider" id="pub-year-2024">
+            <span>2024</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-scene-rearrangement">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/scene-rearrangement/thumbnail.gif" alt="Mastering Scene Rearrangement with Expert-Assisted Curriculum Learning and Adaptive Trade-Off Tree-Search">
+          </div>
           
-          <p class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Mastering Scene Rearrangement with Expert-Assisted Curriculum Learning and Adaptive Trade-Off Tree-Search</h3>
             
-            <a href="" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Zan Wang, <strong>Hanqing Wang</strong>, Wei Liang</p>
             
             
+            <p class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Rearrangement</span>
+              
+              <span class="pub-badge ">RL</span>
+              
+            </div>
             
+            <div class="pub-links">
+              
+              <a href="https://pl-ato.github.io/static/pdfs/paper.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              
+              <a href="https://pl-ato.github.io/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/grutopia/thumbnail.webp" alt="GRUtopia: Dream General Robots in a City at Scale">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">GRUtopia: Dream General Robots in a City at Scale</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-grutopia">
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiahe Chen, Wensi Huang, Qingwei Ben, Tai Wang, et al.</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/grutopia/thumbnail.webp" alt="GRUtopia: Dream General Robots in a City at Scale">
+          </div>
           
-          
-          <p class="pub-venue">arXiv preprint, 2024</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">GRUtopia: Dream General Robots in a City at Scale</h3>
             
-            <a href="https://arxiv.org/abs/2407.10943" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiahe Chen, Wensi Huang, Qingwei Ben, Tai Wang, et al.</p>
             
             
-            <a href="https://github.com/InternRobotics/InternUtopia" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">arXiv preprint, 2024</p>
             
             
-            <a href="https://internrobotics.github.io/user_guide/internutopia/" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              Project
-            </a>
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Simulation</span>
+              
+              <span class="pub-badge ">Benchmark</span>
+              
+            </div>
             
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2407.10943" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/InternRobotics/InternUtopia" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              <a href="https://internrobotics.github.io/user_guide/internutopia/" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Project
+              </a>
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/etpnav/thumbnail.png" alt="ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-etpnav">
           
-          <p class="pub-authors">Dong An, <strong>Hanqing Wang</strong>, Wenguan Wang, Zun Wang, Yan Huang, Keji He, Liang Wang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/etpnav/thumbnail.png" alt="ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments">
+          </div>
           
-          
-          <p class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2024</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">ETPNav: Evolving Topological Planning for Vision-Language Navigation in Continuous Environments</h3>
             
-            <a href="https://arxiv.org/abs/2304.03047" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Dong An, <strong>Hanqing Wang</strong>, Wenguan Wang, Zun Wang, Yan Huang, Keji He, Liang Wang</p>
             
             
-            <a href="https://github.com/MarSaKi/ETPNav" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence (T-PAMI), 2024</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Planning</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2304.03047" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/MarSaKi/ETPNav" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/dreamwalker/thumbnail.png" alt="DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang, Luc Van Gool, Wenguan Wang</p>
+          <div class="pub-year-divider" id="pub-year-2023">
+            <span>2023</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-dreamwalker">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/dreamwalker/thumbnail.png" alt="DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation">
+          </div>
           
-          <p class="pub-venue">International Conference on Computer Vision (ICCV), 2023</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">DREAMWALKER: Mental Planning for Continuous Vision-Language Navigation</h3>
             
-            <a href="https://arxiv.org/abs/2308.07498" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang, Luc Van Gool, Wenguan Wang</p>
             
             
-            <a href="https://github.com/HanqingWangAI/Dreamwalker" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">International Conference on Computer Vision (ICCV), 2023</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Planning</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2308.07498" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/Dreamwalker" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/cqa_23/thumbnail.png" alt="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-cqa">
           
-          <p class="pub-authors">Chuanqi Zang, <strong>Hanqing Wang</strong>, Mingtao Pei, Wei Liang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/cqa_23/thumbnail.png" alt="Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering">
+          </div>
           
-          
-          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Discovering the Real Association: Multimodal Causal Reasoning in Video Question Answering</h3>
             
-            <a href="" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors">Chuanqi Zang, <strong>Hanqing Wang</strong>, Mingtao Pei, Wei Liang</p>
             
             
-            <a href="" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VideoQA</span>
+              
+              <span class="pub-badge ">Causal Reasoning</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/ap_23/thumbnail.png" alt="Active Perception for Visual-Language Navigation<br><br>">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Active Perception for Visual-Language Navigation<br><br></h3>
+        
+        
+        <div class="pub-card reveal" id="pub-ap">
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang, Steven C. H. Hoi, Jianbing Shen, Luc Van Gool</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/ap_23/thumbnail.png" alt="Active Perception for Visual-Language Navigation<br><br>">
+          </div>
           
-          
-          <p class="pub-venue">International Journal of Computer Vision (IJCV), 2023</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Active Perception for Visual-Language Navigation<br><br></h3>
             
-            <a href="https://link.springer.com/article/10.1007/s11263-022-01721-6" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang, Steven C. H. Hoi, Jianbing Shen, Luc Van Gool</p>
             
             
-            <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">International Journal of Computer Vision (IJCV), 2023</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Active Perception</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://link.springer.com/article/10.1007/s11263-022-01721-6" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/mtn_22/thumbnail.png" alt="Towards Versatile Embodied Navigation<br><br>">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Towards Versatile Embodied Navigation<br><br></h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
+          <div class="pub-year-divider" id="pub-year-2022">
+            <span>2022</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-mtn">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/mtn_22/thumbnail.png" alt="Towards Versatile Embodied Navigation<br><br>">
+          </div>
           
-          <p class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2022</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Towards Versatile Embodied Navigation<br><br></h3>
             
-            <a href="https://arxiv.org/abs/2210.16822" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
             
             
-            <a href="https://github.com/HanqingWangAI/VXN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2022</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge pub-badge--highlight">Spotlight</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2210.16822" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/VXN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/ccc_22/thumbnail.png" alt="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-ccc">
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/ccc_22/thumbnail.png" alt="Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation">
+          </div>
           
-          
-          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Counterfactual Cycle-Consistent Learning for Instruction Following and Generation in Vision-Language Navigation</h3>
             
-            <a href="https://ieeexplore.ieee.org/document/9879110" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>,  Wei Liang, Jianbing Shen, Luc Van Gool and Wenguan Wang</p>
             
             
-            <a href="https://github.com/HanqingWangAI/CCC-VLN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2022</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Counterfactual</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="https://ieeexplore.ieee.org/document/9879110" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/CCC-VLN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/ssm/thumbnail.png" alt="Structured Scene Memory for Vision-Language Navigation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Structured Scene Memory for Vision-Language Navigation</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang and Jianbing Shen</p>
+          <div class="pub-year-divider" id="pub-year-2021">
+            <span>2021</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-ssm">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/ssm/thumbnail.png" alt="Structured Scene Memory for Vision-Language Navigation">
+          </div>
           
-          <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Structured Scene Memory for Vision-Language Navigation</h3>
             
-            <a href="/assets/files/posts/ssm/ssm.pdf" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Wei Liang and Jianbing Shen</p>
             
             
-            <a href="https://github.com/HanqingWangAI/SSM" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2021</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Scene Memory</span>
+              
+            </div>
             
-            
+            <div class="pub-links">
+              
+              <a href="/assets/files/posts/ssm/ssm.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/SSM" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/mover/case.gif" alt="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
+          <div class="pub-year-divider" id="pub-year-2020">
+            <span>2020</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-mover">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/mover/case.gif" alt="Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning">
+          </div>
           
-          <p class="pub-venue">SIGGRAPH Asia 2020. ACM Trans. Graph., Vol. 39, No. 6, Article 233. Publication date: December 2020.</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Scene Mover: Automatic Move Planning for Scene Arrangement by Deep Reinforcement Learning</h3>
             
-            <a href="/assets/files/posts/mover/mover.pdf" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
             
             
-            <a href="https://github.com/HanqingWangAI/SceneMover" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">SIGGRAPH Asia 2020. ACM Trans. Graph., Vol. 39, No. 6, Article 233. Publication date: December 2020.</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Scene Arrangement</span>
+              
+              <span class="pub-badge ">RL</span>
+              
+            </div>
             
-            <a href="https://www.youtube.com/embed/zSM-s7zh-vk" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Demo
-            </a>
-            
-            
+            <div class="pub-links">
+              
+              <a href="/assets/files/posts/mover/mover.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/SceneMover" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              <a href="https://www.youtube.com/embed/zSM-s7zh-vk" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Demo
+              </a>
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/active/logo.png" alt="Active Visual Information Gathering for Vision-Language Navigation">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Active Visual Information Gathering for Vision-Language Navigation</h3>
+        
+        
+        <div class="pub-card reveal" id="pub-active">
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Tianmin Shu, Wei Liang and Jianbing Shen</p>
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/active/logo.png" alt="Active Visual Information Gathering for Vision-Language Navigation">
+          </div>
           
-          
-          <p class="pub-venue">Proceedings of the 16th European Conference on Computer Vision (ECCV), 2020</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Active Visual Information Gathering for Vision-Language Navigation</h3>
             
-            <a href="https://arxiv.org/abs/2007.08037" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wenguan Wang, Tianmin Shu, Wei Liang and Jianbing Shen</p>
             
             
-            <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">Proceedings of the 16th European Conference on Computer Vision (ECCV), 2020</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">VLN</span>
+              
+              <span class="pub-badge ">Active Perception</span>
+              
+            </div>
             
-            <a href="https://youtu.be/Ia7LtxsinrU" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Demo
-            </a>
-            
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/abs/2007.08037" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/HanqingWangAI/Active_VLN" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              <a href="https://youtu.be/Ia7LtxsinrU" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Demo
+              </a>
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/3d_recon_19/result.png" alt="Deep Single-View 3D Object Reconstruction with Visual Hull Embedding">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Deep Single-View 3D Object Reconstruction with Visual Hull Embedding</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiaolong Yang, Wei Liang and Xin Tong</p>
+          <div class="pub-year-divider" id="pub-year-2019">
+            <span>2019</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-3d-recon">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/3d_recon_19/result.png" alt="Deep Single-View 3D Object Reconstruction with Visual Hull Embedding">
+          </div>
           
-          <p class="pub-venue">Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019, <strong>(Oral)</strong></p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Deep Single-View 3D Object Reconstruction with Visual Hull Embedding</h3>
             
-            <a href="https://arxiv.org/pdf/1809.03451.pdf" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Jiaolong Yang, Wei Liang and Xin Tong</p>
             
             
-            <a href="https://github.com/hanqingwangai/PSVH-3d-reconstruction" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-              Code
-            </a>
+            <p class="pub-venue">Proceedings of the AAAI Conference on Artificial Intelligence (AAAI), 2019, <strong>(Oral)</strong></p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">3D Reconstruction</span>
+              
+              <span class="pub-badge pub-badge--highlight">Oral</span>
+              
+            </div>
             
-            <a href="http://iitlab.bit.edu.cn/mcislab/~liangwei/projects/aaai19_3d_recon/assets/supplementary_2.mp4" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              Demo
-            </a>
-            
-            
-            <a href="/assets/files/posts/3d_recon_19/Deep Single-View 3D Object Reconstruction with Visual Hull.pptx" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              Slides
-            </a>
-            
+            <div class="pub-links">
+              
+              <a href="https://arxiv.org/pdf/1809.03451.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              <a href="https://github.com/hanqingwangai/PSVH-3d-reconstruction" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Code
+              </a>
+              
+              
+              
+              <a href="http://iitlab.bit.edu.cn/mcislab/~liangwei/projects/aaai19_3d_recon/assets/supplementary_2.mp4" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                Demo
+              </a>
+              
+              
+              <a href="/assets/files/posts/3d_recon_19/Deep Single-View 3D Object Reconstruction with Visual Hull.pptx" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                Slides
+              </a>
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/transfer_17/thumbnail.png" alt="Transferring Objects: Joint Inference of Container and Human Pose">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Transferring Objects: Joint Inference of Container and Human Pose</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
+          <div class="pub-year-divider" id="pub-year-2017">
+            <span>2017</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-transfer">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/transfer_17/thumbnail.png" alt="Transferring Objects: Joint Inference of Container and Human Pose">
+          </div>
           
-          <p class="pub-venue">Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2017</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Transferring Objects: Joint Inference of Container and Human Pose</h3>
             
-            <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Wang_Transferring_Objects_Joint_ICCV_2017_paper.pdf" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Wei Liang and Lap-Fai Yu</p>
             
             
+            <p class="pub-venue">Proceedings of the IEEE International Conference on Computer Vision (ICCV), 2017</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">Pose Estimation</span>
+              
+              <span class="pub-badge ">3D</span>
+              
+            </div>
             
+            <div class="pub-links">
+              
+              <a href="http://openaccess.thecvf.com/content_ICCV_2017/papers/Wang_Transferring_Objects_Joint_ICCV_2017_paper.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
-      
-    
-      
-      <div class="pub-card reveal">
         
-        <div class="pub-thumbnail">
-          <img src="/assets/files/posts/seg_16/framework.png" alt="Joint Labelling and Segmentation for 3D Scanned Human Body">
-        </div>
+      
         
-        <div class="pub-info">
-          <h3 class="pub-title">Joint Labelling and Segmentation for 3D Scanned Human Body</h3>
+        
+        
           
-          <p class="pub-authors"><strong>Hanqing Wang</strong>, Changyang Li, Zikai Gao and Wei Liang</p>
+          <div class="pub-year-divider" id="pub-year-2016">
+            <span>2016</span>
+          </div>
+        
+        <div class="pub-card reveal" id="pub-labelling">
           
+          <div class="pub-thumbnail">
+            <img src="/assets/files/posts/seg_16/framework.png" alt="Joint Labelling and Segmentation for 3D Scanned Human Body">
+          </div>
           
-          <p class="pub-venue">SIGGRAPH ASIA 2016 Virtual Reality meets Physical Reality Workshop</p>
-          
-          <div class="pub-links">
+          <div class="pub-info">
+            <h3 class="pub-title">Joint Labelling and Segmentation for 3D Scanned Human Body</h3>
             
-            <a href="http://sigvr.org/hanqing.pdf" class="pub-link" target="_blank">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Paper
-            </a>
+            <p class="pub-authors"><strong>Hanqing Wang</strong>, Changyang Li, Zikai Gao and Wei Liang</p>
             
             
+            <p class="pub-venue">SIGGRAPH ASIA 2016 Virtual Reality meets Physical Reality Workshop</p>
             
             
+            <div class="pub-badges">
+              
+              <span class="pub-badge ">3D</span>
+              
+              <span class="pub-badge ">Segmentation</span>
+              
+            </div>
             
+            <div class="pub-links">
+              
+              <a href="http://sigvr.org/hanqing.pdf" class="pub-link" target="_blank">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Paper
+              </a>
+              
+              
+              
+              
+              
+            </div>
           </div>
         </div>
-      </div>
+        
       
-    
+    </div>
   </div>
 </section>
 
@@ -1146,6 +1702,41 @@
             }
         });
     });
+
+    // Publication sidebar: click to scroll + active tracking
+    (function() {
+        var sidebarItems = document.querySelectorAll('.pub-sidebar-item');
+        if (!sidebarItems.length) return;
+
+        // Click to smooth scroll
+        sidebarItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.getElementById(item.getAttribute('data-target'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        });
+
+        // Intersection observer to highlight active item
+        var pubCards = document.querySelectorAll('.pub-card[id]');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                var id = entry.target.id;
+                var link = document.querySelector('.pub-sidebar-item[data-target="' + id + '"]');
+                if (link) {
+                    if (entry.isIntersecting) {
+                        sidebarItems.forEach(function(s) { s.classList.remove('active'); });
+                        link.classList.add('active');
+                        link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                    }
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-10% 0px -60% 0px' });
+
+        pubCards.forEach(function(card) { observer.observe(card); });
+    })();
     </script>
 </body>
 </html>

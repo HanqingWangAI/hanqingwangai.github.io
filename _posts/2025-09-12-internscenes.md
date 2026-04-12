@@ -9,5 +9,8 @@ venue: "arXiv preprint, 2025"
 paper: 'https://arxiv.org/abs/2509.10813'
 project: 'https://marjordcpz.github.io/InternScenes.github.io/'
 code: 'https://github.com/InternRobotics/InternScenes'
+badges:
+  - "3D Scene"
+  - "Dataset"
 tags: "3D&nbspScene Simulation Dataset"
 ---

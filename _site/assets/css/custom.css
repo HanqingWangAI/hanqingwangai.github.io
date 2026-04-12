@@ -288,6 +288,29 @@ img {
   animation: fadeInUp 0.8s ease forwards 0.6s;
 }
 
+.hero-bio {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-bio p {
+  margin-bottom: 0.6rem;
+}
+
+.hero-bio a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+
+.hero-bio a:hover {
+  border-bottom-color: var(--accent);
+}
+
 .hero-desc {
   font-size: 1.05rem;
   color: var(--text-secondary);
@@ -475,10 +498,102 @@ img {
 }
 
 /* --- Publications Section --- */
+.pub-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.pub-sidebar {
+  position: sticky;
+  top: 5rem;
+  width: 200px;
+  min-width: 200px;
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  padding-right: 1rem;
+  border-right: 2px solid var(--border-color);
+  scrollbar-width: thin;
+}
+
+.pub-sidebar::-webkit-scrollbar {
+  width: 3px;
+}
+
+.pub-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+.pub-sidebar-year {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 0 0.3rem;
+  margin-top: 0.3rem;
+}
+
+.pub-sidebar-year:first-child {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.pub-sidebar-item {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  margin-bottom: 0.15rem;
+  transition: all var(--transition);
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+}
+
+.pub-sidebar-item:hover {
+  color: var(--accent);
+  background: var(--tag-bg);
+}
+
+.pub-sidebar-item.active {
+  color: var(--accent);
+  font-weight: 600;
+  border-left-color: var(--accent);
+  background: var(--tag-bg);
+}
+
+.pub-year-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.pub-year-divider span {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.pub-year-divider::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(to right, var(--accent-light), transparent);
+  border-radius: 1px;
+}
+
 .pub-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .pub-card {
@@ -559,6 +674,58 @@ img {
   font-style: normal;
   font-weight: 700;
   color: #e74c3c;
+}
+
+.pub-badges {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.pub-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--accent-light);
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.08), rgba(0, 206, 201, 0.08));
+  color: var(--accent);
+  backdrop-filter: blur(4px);
+  transition: all var(--transition);
+}
+
+.pub-badge:hover {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.18), rgba(0, 206, 201, 0.18));
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.2);
+}
+
+.pub-badge--highlight {
+  border-color: #e74c3c;
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(231, 76, 60, 0.05));
+  color: #e74c3c;
+}
+
+.pub-badge--highlight:hover {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.2), rgba(231, 76, 60, 0.12));
+  box-shadow: 0 2px 8px rgba(231, 76, 60, 0.2);
+}
+
+[data-theme="dark"] .pub-badge {
+  border-color: var(--accent-light);
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.12), rgba(0, 206, 201, 0.12));
+  color: var(--accent-light);
+}
+
+[data-theme="dark"] .pub-badge--highlight {
+  border-color: #f87171;
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.15), rgba(231, 76, 60, 0.08));
+  color: #f87171;
 }
 
 .pub-links {
@@ -714,7 +881,8 @@ img {
     font-size: 2.5rem;
   }
 
-  .hero-desc {
+  .hero-desc,
+  .hero-bio {
     margin-left: auto;
     margin-right: auto;
   }
@@ -734,6 +902,14 @@ img {
 
   .section-title {
     font-size: 1.6rem;
+  }
+
+  .pub-sidebar {
+    display: none;
+  }
+
+  .pub-layout {
+    flex-direction: column;
   }
 
   .pub-card {

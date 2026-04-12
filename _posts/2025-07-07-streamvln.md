@@ -9,5 +9,8 @@ venue: "arXiv preprint, 2025"
 paper: 'https://arxiv.org/abs/2507.05240'
 project: 'https://streamvln.github.io/'
 code: 'https://github.com/InternRobotics/StreamVLN'
+badges:
+  - "VLN"
+  - "Streaming"
 tags: "Vision-Language&nbspNavigation Embodied&nbspAI"
 ---

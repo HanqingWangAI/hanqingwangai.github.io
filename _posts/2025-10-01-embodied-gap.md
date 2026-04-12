@@ -8,5 +8,9 @@ authors: Liuyi Wang, Xinyuan Xia, Hui Zhao, <strong>Hanqing Wang</strong>&dagger
 venue: "International Conference on Computer Vision (ICCV), 2025"
 paper: 'https://arxiv.org/abs/2507.13019'
 project: 'https://crystalsixone.github.io/vln_pe.github.io/'
+badges:
+  - "VLN"
+  - "Embodied AI"
+  - "Benchmark"
 tags: "Vision-Language&nbspNavigation Embodied&nbspAI"
 ---

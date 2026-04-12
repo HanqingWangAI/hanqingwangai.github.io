@@ -9,6 +9,9 @@ authors: <strong>Hanqing Wang</strong>, Changyang Li, Zikai Gao and Wei Liang
 venue: 'SIGGRAPH ASIA 2016 Virtual Reality meets Physical Reality Workshop'
 paper: http://sigvr.org/hanqing.pdf
 # code: https://github.com/qweas120/PSVH-3d-reconstruction
+badges:
+  - "3D"
+  - "Segmentation"
 tags: "Semantic&nbspSegmentation Graph&nbspCut"
 ---
 <!-- 

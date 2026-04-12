@@ -7,6 +7,7 @@ thumbnail: '/assets/files/posts/scene-rearrangement/thumbnail.gif'
 authors: Zan Wang, <strong>Hanqing Wang</strong>, Wei Liang
 venue: "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024"
 paper: 'https://pl-ato.github.io/static/pdfs/paper.pdf'
+code: 'https://github.com/pl-ato/PLATO'
 project: 'https://pl-ato.github.io/'
 badges:
   - "Rearrangement"

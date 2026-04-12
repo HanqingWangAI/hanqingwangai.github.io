@@ -7,6 +7,7 @@ thumbnail: '/assets/files/posts/embodied-gap/thumbnail.png'
 authors: Liuyi Wang, Xinyuan Xia, Hui Zhao, <strong>Hanqing Wang</strong>&dagger;, Tai Wang, Yilun Chen, Chengju Liu, Qijun Chen, Jiangmiao Pang
 venue: "International Conference on Computer Vision (ICCV), 2025"
 paper: 'https://arxiv.org/abs/2507.13019'
+code: 'https://github.com/InternRobotics/InternNav/tree/main/scripts/iros_challenge#-run-the-benchmark-locally-same-entrypoint-as-evalai'
 project: 'https://crystalsixone.github.io/vln_pe.github.io/'
 badges:
   - "VLN"

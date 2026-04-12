@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities"
+short_title: "VLN-PE"
 date: 2025-10-01
 author: Hanqing Wang
 thumbnail: '/assets/files/posts/embodied-gap/thumbnail.png'
